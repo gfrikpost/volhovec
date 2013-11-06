@@ -1,0 +1,9 @@
+var imgURL = ["<%= asset_path('actions/interio.png') %>", "<%= asset_path('actions/present.png') %>"];
+setInterval(function() {
+   $.each(imgURL, function(key, value) {
+	if($('#action-image').attr('src') != value){
+	    $('#action-image').prop("src", value); 
+	    return false;
+	}
+   }) 
+}, 10000);
