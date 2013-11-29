@@ -44,11 +44,12 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'spree', :path => 'spree'
+gem 'spree', github: 'spree/spree', branch: '2-1-stable'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-1-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-1-stable'
 gem 'spree_i18n', github: 'spree/spree_i18n', :branch => '2-1-stable'
 gem 'globalize3', github: 'globalize/globalize', ref: '2da5a18c'
-gem 'spree_static_content', :github => 'spree/spree_static_content'
+gem 'spree_static_content', :github => 'spree/spree_static_content', branch: '2-1-stable'
 gem 'spree_editor', :github => 'spree/spree_editor'
 gem 'tinymce-rails-langs'
+gem 'money', :github => "radar/money", :branch => "issue-272"
