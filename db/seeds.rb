@@ -7,5 +7,20 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Spree::Core::Engine.load_seed if defined?(Spree::Core)
-Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+#Spree::Core::Engine.load_seed if defined?(Spree::Core)
+#Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+
+def seeds_path
+  Pathname.new(File.join(File.dirname(__FILE__), '..', '..', 'volhovec', 'db', 'seeds'))
+end
+
+def load_volhovec_seeds(file)
+  path = File.expand_path(seeds_path + "#{file}.rb")
+  # Check to see if the specified file has been loaded before
+  if !$LOADED_FEATURES.include?(path)
+    require path
+    puts "Loaded #{file.titleize} samples"
+  end
+end
+
+load_volhovec_seeds("products")
