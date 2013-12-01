@@ -19,15 +19,27 @@ Spree::OptionValue.create!([
     :option_type => model
   },
   {
+    :name => "7121",
+    :presentation => "7121",
+    :position => 3,
+    :option_type => model
+  },
+  {
+    :name => "7122",
+    :presentation => "7122",
+    :position => 4,
+    :option_type => model
+  },
+  {
     :name => "7131",
     :presentation => "7131",
-    :position => 3,
+    :position => 5,
     :option_type => model
   },
   {
     :name => "7132",
     :presentation => "7132",
-    :position => 4,
+    :position => 6,
     :option_type => model
   },
   {
@@ -40,6 +52,18 @@ Spree::OptionValue.create!([
     :name => "Ivory",
     :presentation => I18n.t('option_values.ivory'),
     :position => 2,
+    :option_type => color,
+  },
+  {
+    :name => "Walnut Modena",
+    :presentation => I18n.t('option_values.walnut_modena'),
+    :position => 3,
+    :option_type => color,
+  },
+  {
+    :name => "Patina Antique",
+    :presentation => I18n.t('option_values.patina_antique'),
+    :position =>4,
     :option_type => color,
   },
   {
@@ -58,6 +82,18 @@ Spree::OptionValue.create!([
     :name => "Satin",
     :presentation => I18n.t('option_values.satin'),
     :position => 3,
+    :option_type => glass
+  },
+  {
+    :name => "Satin-autor-paint-vin",
+    :presentation => I18n.t('option_values.satin_autor_paint_vin'),
+    :position => 4,
+    :option_type => glass
+  },
+  {
+    :name => "Satin-autor-paint-dam",
+    :presentation => I18n.t('option_values.satin_autor_paint_dam'),
+    :position => 5,
     :option_type => glass
   }
 ])

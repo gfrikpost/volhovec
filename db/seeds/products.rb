@@ -17,27 +17,33 @@ products = [
   #},
   {
     :name => "Galant",
-    #:tax_category => clothing,
     :shipping_category => shipping_category,
     :price => 11995
-    #:eur_price => 19,
+  },
+  {
+    :name => "Prio",
+    :shipping_category => shipping_category,
+    :price => 9995
   }
 ]
 
 Spree::Variant.delete_all
+Spree::Product.delete_all
 
 products.each do |product_attrs|
-  Spree::Product.delete_all
   #eur_price = product_attrs.delete(:eur_price)
-  Spree::Config[:currency] = "RUB"
+  #existing = Spree::Product.find_by_name(product_attrs[:name])
+  #unless existing
+    Spree::Config[:currency] = "RUB"
 
-  default_shipping_category = Spree::ShippingCategory.find_by_name!("Default")
-  product = Spree::Product.create!(default_attrs.merge(product_attrs))
-  #Spree::Config[:currency] = "EUR"
-  product.reload
-  #product.price = eur_price
-  product.shipping_category = default_shipping_category
-  product.save!
+    default_shipping_category = Spree::ShippingCategory.find_by_name!("Default")
+    product = Spree::Product.create!(default_attrs.merge(product_attrs))
+    #Spree::Config[:currency] = "EUR"
+    product.reload
+    #product.price = eur_price
+    product.shipping_category = default_shipping_category
+    product.save!
+  #end
 end
 
 #Spree::Config[:currency] = "USD"

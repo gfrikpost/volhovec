@@ -9,7 +9,11 @@ ru:
   option_values:
     white_silk: Белый шелк
     ivory: Слоновая кость
+    walnut_modena: Орех Модена
+    patina_antique: Патина Античная
     satin_autor_paint: Сатинированное стекло с авторским рисунком «прованс»
+    satin_autor_paint_vin: Сатинированное стекло с авторским рисунком «виньетка»
+    satin_autor_paint_dam: Сатинированное стекло с авторским рисунком «дамаск»
     satin_loft: Сатинированное стекло лофт
     satin: Сатиновое стекло
   product_properties:
@@ -17,3 +21,5 @@ ru:
   variants:
     white_silk: БШ
     ivory: СК
+    walnut_modena: ОРМ
+    patina_antique: ПАН

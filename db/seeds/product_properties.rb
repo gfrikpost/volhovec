@@ -3,6 +3,10 @@ products =
     "Galant" => 
     { 
       I18n.t('product_properties.material') => "CIPLEX"
+    },
+    "Prio" => 
+    { 
+      I18n.t('product_properties.material') => "CIPLEX"
     }
   }
 

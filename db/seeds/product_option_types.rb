@@ -7,3 +7,7 @@ Spree::ProductOptionType.delete_all
 galant = Spree::Product.find_by_name!("Galant")
 galant.option_types = [model, color, glass]
 galant.save!
+
+galant = Spree::Product.find_by_name!("Prio")
+galant.option_types = [model, color, glass]
+galant.save!
