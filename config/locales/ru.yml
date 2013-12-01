@@ -1,3 +1,19 @@
 ru:
   spree:
     shop_name: Интернет - салон дверей "ВОЛХОВЕЦ"
+  product_description: "<p><span>Цена за базовый комплект одностворчатой двери&nbsp;</span><br /><span>(Размер: 600/700/800/900 x 2000 мм, 600*1900 мм (глухое полотно)) </span><br /><br /><span>Базовый комплект включает:&nbsp;</span><br /><span>1. Полотно;&nbsp;</span><br /><span>2. Коробка;&nbsp;</span><br /><span>3. Наличники на две стороны (5 шт.)&nbsp;</span><br /><span>4. Комплект фурнитуры: карточные петли (2шт.), магнитный замок AGB</span></p>"
+  option_types:
+    model: Модель
+    color: Цвет
+    glass: Стекло
+  option_values:
+    white_silk: Белый шелк
+    ivory: Слоновая кость
+    satin_autor_paint: Сатинированное стекло с авторским рисунком «прованс»
+    satin_loft: Сатинированное стекло лофт
+    satin: Сатиновое стекло
+  product_properties:
+    material: Материал
+  variants:
+    white_silk: БШ
+    ivory: СК

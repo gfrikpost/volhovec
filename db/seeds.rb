@@ -24,3 +24,8 @@ def load_volhovec_seeds(file)
 end
 
 load_volhovec_seeds("products")
+load_volhovec_seeds("option_values")
+load_volhovec_seeds("product_option_types")
+load_volhovec_seeds("product_properties")
+load_volhovec_seeds("variants")
+load_volhovec_seeds("assets")
