@@ -24,6 +24,11 @@ products = [
     :name => "Prio",
     :shipping_category => shipping_category,
     :price => 9995
+  },
+  {
+    :name => "Legend",
+    :shipping_category => shipping_category,
+    :price => 29995
   }
 ]
 

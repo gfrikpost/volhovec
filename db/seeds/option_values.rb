@@ -43,6 +43,36 @@ Spree::OptionValue.create!([
     :option_type => model
   },
   {
+    :name => "0130",
+    :presentation => "0130",
+    :position => 7,
+    :option_type => model
+  },
+  {
+    :name => "0131",
+    :presentation => "0131",
+    :position => 8,
+    :option_type => model
+  },
+  {
+    :name => "0132",
+    :presentation => "0132",
+    :position => 9,
+    :option_type => model
+  },
+  {
+    :name => "0140",
+    :presentation => "0140",
+    :position => 10,
+    :option_type => model
+  },
+  {
+    :name => "0141",
+    :presentation => "0141",
+    :position => 8,
+    :option_type => model
+  },
+  {
     :name => "White silk",
     :presentation => I18n.t('option_values.white_silk'),
     :position => 1,
@@ -64,6 +94,24 @@ Spree::OptionValue.create!([
     :name => "Patina Antique",
     :presentation => I18n.t('option_values.patina_antique'),
     :position =>4,
+    :option_type => color,
+  },
+  {
+    :name => "Beech nut",
+    :presentation => I18n.t('option_values.beech_nut'),
+    :position =>5,
+    :option_type => color,
+  },
+  {
+    :name => "Beech ivory",
+    :presentation => I18n.t('option_values.beech_ivory'),
+    :position =>6,
+    :option_type => color,
+  },
+  {
+    :name => "Beech wenge",
+    :presentation => I18n.t('option_values.beech_wenge'),
+    :position =>7,
     :option_type => color,
   },
   {

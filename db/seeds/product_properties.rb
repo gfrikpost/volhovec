@@ -1,12 +1,17 @@
 products =
-  { 
-    "Galant" => 
-    { 
+  {
+    "Galant" =>
+    {
       I18n.t('product_properties.material') => "CIPLEX"
     },
-    "Prio" => 
-    { 
+    "Prio" =>
+    {
       I18n.t('product_properties.material') => "CIPLEX"
+    },
+    "Legend" =>
+    {
+      I18n.t('product_properties.material') =>
+      I18n.t('product_properties.solid_beech')
     }
   }
 

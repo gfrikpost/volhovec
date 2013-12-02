@@ -11,6 +11,9 @@ ru:
     ivory: Слоновая кость
     walnut_modena: Орех Модена
     patina_antique: Патина Античная
+    beech_nut: Бук орех
+    beech_ivory: Бук слоновая кость
+    beech_wenge: Бук венге
     satin_autor_paint: Сатинированное стекло с авторским рисунком «прованс»
     satin_autor_paint_vin: Сатинированное стекло с авторским рисунком «виньетка»
     satin_autor_paint_dam: Сатинированное стекло с авторским рисунком «дамаск»
@@ -18,8 +21,12 @@ ru:
     satin: Сатиновое стекло
   product_properties:
     material: Материал
+    solid_beech: массив бука
   variants:
     white_silk: БШ
     ivory: СК
     walnut_modena: ОРМ
     patina_antique: ПАН
+    beech_nut: БОР
+    beech_ivory: БСК
+    beech_wenge: БВ

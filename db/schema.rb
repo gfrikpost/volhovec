@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20131201024810) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "spree_activator_translations", force: true do |t|
     t.integer  "spree_activator_id"
     t.string   "locale"
