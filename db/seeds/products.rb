@@ -29,6 +29,11 @@ products = [
     :name => "Legend",
     :shipping_category => shipping_category,
     :price => 29995
+  },
+  {
+    :name => "Modum",
+    :shipping_category => shipping_category,
+    :price => 12495
   }
 ]
 
@@ -44,7 +49,7 @@ products.each do |product_attrs|
     default_shipping_category = Spree::ShippingCategory.find_by_name!("Default")
     product = Spree::Product.create!(default_attrs.merge(product_attrs))
     #Spree::Config[:currency] = "EUR"
-    product.reload
+    #product.reload
     #product.price = eur_price
     product.shipping_category = default_shipping_category
     product.save!

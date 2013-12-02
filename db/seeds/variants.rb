@@ -1,6 +1,9 @@
+Spree::Config[:currency] = "RUB"
+
 galant = Spree::Product.find_by_name!("Galant")
 prio = Spree::Product.find_by_name!("Prio")
 legend = Spree::Product.find_by_name!("Legend")
+modum = Spree::Product.find_by_name!("Modum")
 
 
 m7021 = Spree::OptionValue.find_by_name!("7021")
@@ -16,6 +19,13 @@ m0132 = Spree::OptionValue.find_by_name!("0132")
 m0140 = Spree::OptionValue.find_by_name!("0140")
 m0141 = Spree::OptionValue.find_by_name!("0141")
 
+m4012 = Spree::OptionValue.find_by_name!("4012")
+m4016 = Spree::OptionValue.find_by_name!("4016")
+m4017 = Spree::OptionValue.find_by_name!("4017")
+m4021 = Spree::OptionValue.find_by_name!("4021")
+m4023 = Spree::OptionValue.find_by_name!("4023")
+m4024 = Spree::OptionValue.find_by_name!("4024")
+
 
 white_silk = Spree::OptionValue.find_by_name!("White silk")
 ivory = Spree::OptionValue.find_by_name!("Ivory")
@@ -25,6 +35,11 @@ patina_antique = Spree::OptionValue.find_by_name!("Patina Antique")
 beech_nut = Spree::OptionValue.find_by_name!("Beech nut")
 beech_ivory = Spree::OptionValue.find_by_name!("Beech ivory")
 beech_wenge = Spree::OptionValue.find_by_name!("Beech wenge")
+
+white_oak = Spree::OptionValue.find_by_name!("White oak")
+bog_oak = Spree::OptionValue.find_by_name!("Bog oak")
+wenge = Spree::OptionValue.find_by_name!("Wenge")
+cream_oak = Spree::OptionValue.find_by_name!("Cream oak")
 
 
 satin_ap = Spree::OptionValue.find_by_name!("Satin-autor-paint")
@@ -285,6 +300,81 @@ variants = [
     :sku => "0141#{I18n.t('variants.beech_wenge')}",
     :cost_price => 29995
   },
+  
+  
+  {
+    :product => modum,
+    :option_values => [m4012, white_oak],
+    :sku => "4012#{I18n.t('variants.white_oak')}",
+    :cost_price => 12495
+  },
+  {
+    :product => modum,
+    :option_values => [m4012, wenge],
+    :sku => "4012#{I18n.t('variants.wenge')}",
+    :cost_price => 15495
+  },
+  {
+    :product => modum,
+    :option_values => [m4016, white_oak],
+    :sku => "4016#{I18n.t('variants.white_oak')}",
+    :cost_price => 11995
+  },
+  {
+    :product => modum,
+    :option_values => [m4016, wenge],
+    :sku => "4016#{I18n.t('variants.wenge')}",
+    :cost_price => 14995
+  },
+  {
+    :product => modum,
+    :option_values => [m4017, white_oak],
+    :sku => "4017#{I18n.t('variants.white_oak')}",
+    :cost_price => 11795
+  },
+  {
+    :product => modum,
+    :option_values => [m4017, wenge],
+    :sku => "4017#{I18n.t('variants.wenge')}",
+    :cost_price => 14795
+  },
+  {
+    :product => modum,
+    :option_values => [m4021, bog_oak],
+    :sku => "4021#{I18n.t('variants.bog_oak')}",
+    :cost_price => 12995
+  },
+  {
+    :product => modum,
+    :option_values => [m4021, cream_oak],
+    :sku => "4021#{I18n.t('variants.cream_oak')}",
+    :cost_price => 12995
+  },
+  {
+    :product => modum,
+    :option_values => [m4023, bog_oak],
+    :sku => "4023#{I18n.t('variants.bog_oak')}",
+    :cost_price => 13995
+  },
+  {
+    :product => modum,
+    :option_values => [m4023, cream_oak],
+    :sku => "4023#{I18n.t('variants.cream_oak')}",
+    :cost_price => 13995
+  },
+  {
+    :product => modum,
+    :option_values => [m4024, bog_oak],
+    :sku => "4024#{I18n.t('variants.bog_oak')}",
+    :cost_price => 14995
+  },
+  {
+    :product => modum,
+    :option_values => [m4024, cream_oak],
+    :sku => "4024#{I18n.t('variants.cream_oak')}",
+    :cost_price => 14995
+  },
+  
 ]
 
 #masters = {

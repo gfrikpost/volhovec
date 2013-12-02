@@ -14,6 +14,10 @@ ru:
     beech_nut: Бук орех
     beech_ivory: Бук слоновая кость
     beech_wenge: Бук венге
+    white_oak: Дуб беленый
+    bog_oak: Дуб мореный
+    wenge: Венге
+    cream_oak: Дуб кремовый
     satin_autor_paint: Сатинированное стекло с авторским рисунком «прованс»
     satin_autor_paint_vin: Сатинированное стекло с авторским рисунком «виньетка»
     satin_autor_paint_dam: Сатинированное стекло с авторским рисунком «дамаск»
@@ -22,6 +26,7 @@ ru:
   product_properties:
     material: Материал
     solid_beech: массив бука
+    oak_veneer: шпон дуба
   variants:
     white_silk: БШ
     ivory: СК
@@ -30,3 +35,7 @@ ru:
     beech_nut: БОР
     beech_ivory: БСК
     beech_wenge: БВ
+    white_oak: ДБЕ
+    bog_oak: ДМ
+    wenge: В
+    cream_oak: ДК

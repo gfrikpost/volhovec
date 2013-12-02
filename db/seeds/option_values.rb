@@ -73,6 +73,42 @@ Spree::OptionValue.create!([
     :option_type => model
   },
   {
+    :name => "4012",
+    :presentation => "4012",
+    :position => 9,
+    :option_type => model
+  },
+  {
+    :name => "4021",
+    :presentation => "4021",
+    :position => 10,
+    :option_type => model
+  },
+  {
+    :name => "4016",
+    :presentation => "4016",
+    :position => 11,
+    :option_type => model
+  },
+  {
+    :name => "4017",
+    :presentation => "4017",
+    :position => 12,
+    :option_type => model
+  },
+  {
+    :name => "4023",
+    :presentation => "4023",
+    :position => 13,
+    :option_type => model
+  },
+   {
+    :name => "4024",
+    :presentation => "4024",
+    :position => 14,
+    :option_type => model
+  },
+  {
     :name => "White silk",
     :presentation => I18n.t('option_values.white_silk'),
     :position => 1,
@@ -112,6 +148,30 @@ Spree::OptionValue.create!([
     :name => "Beech wenge",
     :presentation => I18n.t('option_values.beech_wenge'),
     :position =>7,
+    :option_type => color,
+  },
+  {
+    :name => "White oak",
+    :presentation => I18n.t('option_values.white_oak'),
+    :position =>8,
+    :option_type => color,
+  },
+  {
+    :name => "Bog oak",
+    :presentation => I18n.t('option_values.bog_oak'),
+    :position =>9,
+    :option_type => color,
+  },
+  {
+    :name => "Wenge",
+    :presentation => I18n.t('option_values.wenge'),
+    :position =>10,
+    :option_type => color,
+  },
+  {
+    :name => "Cream oak",
+    :presentation => I18n.t('option_values.cream_oak'),
+    :position =>11,
     :option_type => color,
   },
   {

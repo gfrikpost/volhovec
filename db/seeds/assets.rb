@@ -4,6 +4,7 @@ products = {}
 products[:galant] = Spree::Product.find_by_name!("Galant")
 products[:prio] = Spree::Product.find_by_name!("Prio")
 products[:legend] = Spree::Product.find_by_name!("Legend")
+products[:modum] = Spree::Product.find_by_name!("Modum")
 
 def image(name, type="jpeg")
   images_path = Pathname.new(File.dirname(__FILE__)) + "images"
@@ -77,6 +78,22 @@ products[:legend].variants.each do |variant|
   main_image = image("#{model}_#{color}", "png")
   variant.images.create!(:attachment => main_image)
 end
+
+products[:modum].variants.each do |variant|
+  model = variant.option_value("model")
+
+  color = variant.option_value("color")
+  color = "dub_belen" if color == I18n.t('option_values.white_oak')
+  color = "dub_moreno" if color == I18n.t('option_values.bog_oak')
+  color = "dub_cream" if color == I18n.t('option_values.cream_oak')
+  color = "venge" if color == I18n.t('option_values.wenge')
+
+  p "#{model}_#{color}"
+
+  main_image = image("#{model}_#{color}", "png")
+  variant.images.create!(:attachment => main_image)
+end
+
 #images.each do |variant, attachments|
   #puts "Loading images for #{variant.name}"
   #attachments.each do |attachment|

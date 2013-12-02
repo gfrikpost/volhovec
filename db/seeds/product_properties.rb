@@ -12,6 +12,11 @@ products =
     {
       I18n.t('product_properties.material') =>
       I18n.t('product_properties.solid_beech')
+    },
+    "Modum" =>
+    {
+      I18n.t('product_properties.material') =>
+      I18n.t('product_properties.oak_veneer')
     }
   }
 
