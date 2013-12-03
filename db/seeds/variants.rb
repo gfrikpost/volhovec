@@ -1,9 +1,8 @@
-Spree::Config[:currency] = "RUB"
-
 galant = Spree::Product.find_by_name!("Galant")
 prio = Spree::Product.find_by_name!("Prio")
 legend = Spree::Product.find_by_name!("Legend")
 modum = Spree::Product.find_by_name!("Modum")
+tekton = Spree::Product.find_by_name!("Tekton")
 
 
 m7021 = Spree::OptionValue.find_by_name!("7021")
@@ -26,6 +25,19 @@ m4021 = Spree::OptionValue.find_by_name!("4021")
 m4023 = Spree::OptionValue.find_by_name!("4023")
 m4024 = Spree::OptionValue.find_by_name!("4024")
 
+m2021 = Spree::OptionValue.find_by_name!("2021")
+m2024 = Spree::OptionValue.find_by_name!("2024")
+m2041 = Spree::OptionValue.find_by_name!("2041")
+m2042 = Spree::OptionValue.find_by_name!("2042")
+m2051 = Spree::OptionValue.find_by_name!("2051")
+m2052 = Spree::OptionValue.find_by_name!("2052")
+m2054 = Spree::OptionValue.find_by_name!("2054")
+m2061 = Spree::OptionValue.find_by_name!("2061")
+m2062 = Spree::OptionValue.find_by_name!("2062")
+m2064 = Spree::OptionValue.find_by_name!("2064")
+
+
+
 
 white_silk = Spree::OptionValue.find_by_name!("White silk")
 ivory = Spree::OptionValue.find_by_name!("Ivory")
@@ -40,6 +52,10 @@ white_oak = Spree::OptionValue.find_by_name!("White oak")
 bog_oak = Spree::OptionValue.find_by_name!("Bog oak")
 wenge = Spree::OptionValue.find_by_name!("Wenge")
 cream_oak = Spree::OptionValue.find_by_name!("Cream oak")
+
+anegri = Spree::OptionValue.find_by_name!("Anegri")
+anegri_dark_varnish = Spree::OptionValue.find_by_name!("Anegri dark varnish")
+nut = Spree::OptionValue.find_by_name!("Nut")
 
 
 satin_ap = Spree::OptionValue.find_by_name!("Satin-autor-paint")
@@ -300,8 +316,8 @@ variants = [
     :sku => "0141#{I18n.t('variants.beech_wenge')}",
     :cost_price => 29995
   },
-  
-  
+
+
   {
     :product => modum,
     :option_values => [m4012, white_oak],
@@ -374,7 +390,117 @@ variants = [
     :sku => "4024#{I18n.t('variants.cream_oak')}",
     :cost_price => 14995
   },
-  
+
+
+  {
+    :product => tekton,
+    :option_values => [m2051, anegri],
+    :sku => "2051#{I18n.t('variants.anegri')}",
+    :cost_price => 12995
+  },
+  {
+    :product => tekton,
+    :option_values => [m2051, anegri_dark_varnish],
+    :sku => "2051#{I18n.t('variants.anegri_dark_varnish')}",
+    :cost_price => 12995
+  },
+  {
+    :product => tekton,
+    :option_values => [m2052, anegri],
+    :sku => "2052#{I18n.t('variants.anegri')}",
+    :cost_price => 13995
+  },
+  {
+    :product => tekton,
+    :option_values => [m2052, anegri_dark_varnish],
+    :sku => "2052#{I18n.t('variants.anegri_dark_varnish')}",
+    :cost_price => 13995
+  },
+  {
+    :product => tekton,
+    :option_values => [m2054, anegri],
+    :sku => "2054#{I18n.t('variants.anegri')}",
+    :cost_price => 14495
+  },
+  {
+    :product => tekton,
+    :option_values => [m2054, anegri_dark_varnish],
+    :sku => "2054#{I18n.t('variants.anegri_dark_varnish')}",
+    :cost_price => 14995
+  },
+  {
+    :product => tekton,
+    :option_values => [m2021, anegri],
+    :sku => "2021#{I18n.t('variants.anegri')}",
+    :cost_price => 11995
+  },
+  {
+    :product => tekton,
+    :option_values => [m2021, anegri_dark_varnish],
+    :sku => "2021#{I18n.t('variants.anegri_dark_varnish')}",
+    :cost_price => 11995
+  },
+  {
+    :product => tekton,
+    :option_values => [m2024, anegri],
+    :sku => "2024#{I18n.t('variants.anegri')}",
+    :cost_price => 12495
+  },
+  {
+    :product => tekton,
+    :option_values => [m2024, anegri_dark_varnish],
+    :sku => "2024#{I18n.t('variants.anegri_dark_varnish')}",
+    :cost_price => 12495
+  },
+  {
+    :product => tekton,
+    :option_values => [m2061, anegri],
+    :sku => "2061#{I18n.t('variants.anegri')}",
+    :cost_price => 13495
+  },
+  {
+    :product => tekton,
+    :option_values => [m2061, nut],
+    :sku => "2061#{I18n.t('variants.nut')}",
+    :cost_price => 13495
+  },
+  {
+    :product => tekton,
+    :option_values => [m2062, anegri],
+    :sku => "2062#{I18n.t('variants.anegri')}",
+    :cost_price => 14495
+  },
+  {
+    :product => tekton,
+    :option_values => [m2062, nut],
+    :sku => "2062#{I18n.t('variants.nut')}",
+    :cost_price => 14995
+  },
+  {
+    :product => tekton,
+    :option_values => [m2064, anegri],
+    :sku => "2064#{I18n.t('variants.anegri')}",
+    :cost_price => 14495
+  },
+  {
+    :product => tekton,
+    :option_values => [m2064, nut],
+    :sku => "2064#{I18n.t('variants.nut')}",
+    :cost_price => 14995
+  },
+  {
+    :product => tekton,
+    :option_values => [m2041, nut],
+    :sku => "2041#{I18n.t('variants.nut')}",
+    :cost_price => 12995
+  },
+  {
+    :product => tekton,
+    :option_values => [m2042, nut],
+    :sku => "2042#{I18n.t('variants.nut')}",
+    :cost_price => 13495
+  },
+
 ]
 
 #masters = {

@@ -34,6 +34,11 @@ products = [
     :name => "Modum",
     :shipping_category => shipping_category,
     :price => 12495
+  },
+  {
+    :name => "Tekton",
+    :shipping_category => shipping_category,
+    :price => 12995
   }
 ]
 

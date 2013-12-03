@@ -19,3 +19,7 @@ legend.save!
 modum = Spree::Product.find_by_name!("Modum")
 modum.option_types = [model, color]
 modum.save!
+
+tekton = Spree::Product.find_by_name!("Tekton")
+tekton.option_types = [model, color]
+tekton.save!

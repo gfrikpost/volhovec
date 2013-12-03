@@ -108,6 +108,70 @@ Spree::OptionValue.create!([
     :position => 14,
     :option_type => model
   },
+
+
+  {
+    :name => "2051",
+    :presentation => "2051",
+    :position => 15,
+    :option_type => model
+  },
+  {
+    :name => "2052",
+    :presentation => "2052",
+    :position => 16,
+    :option_type => model
+  },
+  {
+    :name => "2054",
+    :presentation => "2054",
+    :position => 17,
+    :option_type => model
+  },
+  {
+    :name => "2021",
+    :presentation => "2021",
+    :position => 18,
+    :option_type => model
+  },
+  {
+    :name => "2024",
+    :presentation => "2024",
+    :position => 19,
+    :option_type => model
+  },
+  {
+    :name => "2061",
+    :presentation => "2061",
+    :position => 20,
+    :option_type => model
+  },
+  {
+    :name => "2062",
+    :presentation => "2062",
+    :position => 21,
+    :option_type => model
+  },
+  {
+    :name => "2064",
+    :presentation => "2064",
+    :position => 22,
+    :option_type => model
+  },
+  {
+    :name => "2041",
+    :presentation => "2041",
+    :position => 23,
+    :option_type => model
+  },
+  {
+    :name => "2042",
+    :presentation => "2042",
+    :position => 24,
+    :option_type => model
+  },
+
+
   {
     :name => "White silk",
     :presentation => I18n.t('option_values.white_silk'),
@@ -174,6 +238,27 @@ Spree::OptionValue.create!([
     :position =>11,
     :option_type => color,
   },
+
+  {
+    :name => "Anegri",
+    :presentation => I18n.t('option_values.anegri'),
+    :position =>12,
+    :option_type => color,
+  },
+  {
+    :name => "Anegri dark varnish",
+    :presentation => I18n.t('option_values.anegri_dark_varnish'),
+    :position =>13,
+    :option_type => color,
+  },
+  {
+    :name => "Nut",
+    :presentation => I18n.t('option_values.nut'),
+    :position =>14,
+    :option_type => color,
+  },
+
+
   {
     :name => "Satin-autor-paint",
     :presentation => I18n.t('option_values.satin_autor_paint'),

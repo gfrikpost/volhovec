@@ -18,6 +18,9 @@ ru:
     bog_oak: Дуб мореный
     wenge: Венге
     cream_oak: Дуб кремовый
+    anegri: Анегри
+    anegri_dark_varnish: Анегри темный лак
+    nut: Орех
     satin_autor_paint: Сатинированное стекло с авторским рисунком «прованс»
     satin_autor_paint_vin: Сатинированное стекло с авторским рисунком «виньетка»
     satin_autor_paint_dam: Сатинированное стекло с авторским рисунком «дамаск»
@@ -27,6 +30,8 @@ ru:
     material: Материал
     solid_beech: массив бука
     oak_veneer: шпон дуба
+    nut_veneer: шпон ореха
+    anegri_veneer: шпон анегри
   variants:
     white_silk: БШ
     ivory: СК
@@ -39,3 +44,6 @@ ru:
     bog_oak: ДМ
     wenge: В
     cream_oak: ДК
+    anegri: АН
+    anegri_dark_varnish: АН ТЛ
+    nut: ОР

@@ -17,6 +17,12 @@ products =
     {
       I18n.t('product_properties.material') =>
       I18n.t('product_properties.oak_veneer')
+    },
+    "Tekton" =>
+    {
+      I18n.t('product_properties.material') =>
+      "#{I18n.t('product_properties.nut_veneer')}|
+        #{I18n.t('product_properties.anegri_veneer')}"
     }
   }
 
