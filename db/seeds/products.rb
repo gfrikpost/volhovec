@@ -49,6 +49,7 @@ products = [
 
 Spree::Variant.delete_all
 Spree::Product.delete_all
+Spree::Price.delete_all
 
 products.each do |product_attrs|
   #eur_price = product_attrs.delete(:eur_price)

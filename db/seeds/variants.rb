@@ -650,7 +650,12 @@ variants = [
 #  }
 #}
 
-Spree::Variant.create!(variants)
+#Spree::Variant.create!(variants)
+variants.each do |var|
+  variant = Spree::Variant.create!(var)
+  variant.price = var[:cost_price]
+  variant.save
+end
 
 #masters.each do |product, variant_attrs|
 #  product.master.update_attributes!(variant_attrs)
