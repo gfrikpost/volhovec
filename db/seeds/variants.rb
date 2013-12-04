@@ -3,6 +3,7 @@ prio = Spree::Product.find_by_name!("Prio")
 legend = Spree::Product.find_by_name!("Legend")
 modum = Spree::Product.find_by_name!("Modum")
 tekton = Spree::Product.find_by_name!("Tekton")
+nuance = Spree::Product.find_by_name!("Nuance")
 
 
 m7021 = Spree::OptionValue.find_by_name!("7021")
@@ -36,6 +37,14 @@ m2061 = Spree::OptionValue.find_by_name!("2061")
 m2062 = Spree::OptionValue.find_by_name!("2062")
 m2064 = Spree::OptionValue.find_by_name!("2064")
 
+m3020 = Spree::OptionValue.find_by_name!("3020")
+m3023 = Spree::OptionValue.find_by_name!("3023")
+m3024 = Spree::OptionValue.find_by_name!("3024")
+m3025 = Spree::OptionValue.find_by_name!("3025")
+m3026 = Spree::OptionValue.find_by_name!("3026")
+m3027 = Spree::OptionValue.find_by_name!("3027")
+m3028 = Spree::OptionValue.find_by_name!("3028")
+
 
 
 
@@ -56,6 +65,10 @@ cream_oak = Spree::OptionValue.find_by_name!("Cream oak")
 anegri = Spree::OptionValue.find_by_name!("Anegri")
 anegri_dark_varnish = Spree::OptionValue.find_by_name!("Anegri dark varnish")
 nut = Spree::OptionValue.find_by_name!("Nut")
+
+ash_vanilla = Spree::OptionValue.find_by_name!("Ash vanilla")
+mahogany_mocha = Spree::OptionValue.find_by_name!("Mahogany mocha")
+anegry_chocolate = Spree::OptionValue.find_by_name!("Anegry chocolate")
 
 
 satin_ap = Spree::OptionValue.find_by_name!("Satin-autor-paint")
@@ -501,6 +514,133 @@ variants = [
     :cost_price => 13495
   },
 
+
+  {
+    :product => nuance,
+    :option_values => [m3020, ash_vanilla],
+    :sku => "3020#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 9995
+  },
+  {
+    :product => nuance,
+    :option_values => [m3020, mahogany_mocha],
+    :sku => "3020#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 9995
+  },
+  {
+    :product => nuance,
+    :option_values => [m3020, anegry_chocolate],
+    :sku => "3020#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 9995
+  },
+  {
+    :product => nuance,
+    :option_values => [m3023, ash_vanilla],
+    :sku => "3023#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 11495
+  },
+  {
+    :product => nuance,
+    :option_values => [m3023, mahogany_mocha],
+    :sku => "3023#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 11495
+  },
+  {
+    :product => nuance,
+    :option_values => [m3023, anegry_chocolate],
+    :sku => "3023#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 11495
+  },
+  {
+    :product => nuance,
+    :option_values => [m3024, ash_vanilla],
+    :sku => "3024#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 11995
+  },
+  {
+    :product => nuance,
+    :option_values => [m3024, mahogany_mocha],
+    :sku => "3024#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 11995
+  },
+  {
+    :product => nuance,
+    :option_values => [m3024, anegry_chocolate],
+    :sku => "3024#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 11995
+  },
+  {
+    :product => nuance,
+    :option_values => [m3025, ash_vanilla],
+    :sku => "3025#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 11495
+  },
+  {
+    :product => nuance,
+    :option_values => [m3025, mahogany_mocha],
+    :sku => "3025#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 11495
+  },
+  {
+    :product => nuance,
+    :option_values => [m3025, anegry_chocolate],
+    :sku => "3025#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 11495
+  },
+  {
+    :product => nuance,
+    :option_values => [m3026, ash_vanilla],
+    :sku => "3026#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 11995
+  },
+  {
+    :product => nuance,
+    :option_values => [m3026, mahogany_mocha],
+    :sku => "3026#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 11995
+  },
+  {
+    :product => nuance,
+    :option_values => [m3026, anegry_chocolate],
+    :sku => "3026#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 11995
+  },
+  {
+    :product => nuance,
+    :option_values => [m3027, ash_vanilla],
+    :sku => "3027#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 12995
+  },
+  {
+    :product => nuance,
+    :option_values => [m3027, mahogany_mocha],
+    :sku => "3027#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 12995
+  },
+  {
+    :product => nuance,
+    :option_values => [m3027, anegry_chocolate],
+    :sku => "3027#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 12995
+  },
+  {
+    :product => nuance,
+    :option_values => [m3028, ash_vanilla],
+    :sku => "3028#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 14995
+  },
+  {
+    :product => nuance,
+    :option_values => [m3028, mahogany_mocha],
+    :sku => "3028#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 14995
+  },
+  {
+    :product => nuance,
+    :option_values => [m3028, anegry_chocolate],
+    :sku => "3028#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 14995
+  },
 ]
 
 #masters = {

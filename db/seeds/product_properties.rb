@@ -23,7 +23,12 @@ products =
       I18n.t('product_properties.material') =>
       "#{I18n.t('product_properties.nut_veneer')}|
         #{I18n.t('product_properties.anegri_veneer')}"
-    }
+    },
+    "Nuance" =>
+    {
+      I18n.t('product_properties.material') =>
+      "#{I18n.t('product_properties.ash_veneer')}|#{I18n.t('product_properties.mahogany_veneer')}|#{I18n.t('product_properties.anegri_veneer')}"
+    },
   }
 
 products.each do |name, properties|

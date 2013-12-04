@@ -6,6 +6,7 @@ products[:prio] = Spree::Product.find_by_name!("Prio")
 products[:legend] = Spree::Product.find_by_name!("Legend")
 products[:modum] = Spree::Product.find_by_name!("Modum")
 products[:tekton] = Spree::Product.find_by_name!("Tekton")
+products[:nuance] = Spree::Product.find_by_name!("Nuance")
 
 def image(name, type="jpeg")
   images_path = Pathname.new(File.dirname(__FILE__)) + "images"
@@ -102,6 +103,20 @@ products[:tekton].variants.each do |variant|
   color = "anegri" if color == I18n.t('option_values.anegri')
   color = "anegri_temn_lak" if color == I18n.t('option_values.anegri_dark_varnish')
   color = "orex" if color == I18n.t('option_values.nut')
+
+  p "#{model}_#{color}"
+
+  main_image = image("#{model}_#{color}", "png")
+  variant.images.create!(:attachment => main_image)
+end
+
+products[:nuance].variants.each do |variant|
+  model = variant.option_value("model")
+
+  color = variant.option_value("color")
+  color = "yasen_vanilla" if color == I18n.t('option_values.ash_vanilla')
+  color = "red_derevo_mokko" if color == I18n.t('option_values.mahogany_mocha')
+  color = "anegri_shokolad" if color == I18n.t('option_values.anegry_chocolate')
 
   p "#{model}_#{color}"
 

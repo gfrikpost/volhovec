@@ -23,3 +23,7 @@ modum.save!
 tekton = Spree::Product.find_by_name!("Tekton")
 tekton.option_types = [model, color]
 tekton.save!
+
+nuance = Spree::Product.find_by_name!("Nuance")
+nuance.option_types = [model, color]
+nuance.save!

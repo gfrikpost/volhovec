@@ -171,6 +171,49 @@ Spree::OptionValue.create!([
     :option_type => model
   },
 
+  {
+    :name => "3020",
+    :presentation => "3020",
+    :position => 25,
+    :option_type => model
+  },
+  {
+    :name => "3023",
+    :presentation => "3023",
+    :position => 26,
+    :option_type => model
+  },
+  {
+    :name => "3024",
+    :presentation => "3024",
+    :position => 27,
+    :option_type => model
+  },
+  {
+    :name => "3025",
+    :presentation => "3025",
+    :position => 28,
+    :option_type => model
+  },
+  {
+    :name => "3026",
+    :presentation => "3026",
+    :position => 29,
+    :option_type => model
+  },
+  {
+    :name => "3027",
+    :presentation => "3027",
+    :position => 30,
+    :option_type => model
+  },
+  {
+    :name => "3028",
+    :presentation => "3028",
+    :position => 31,
+    :option_type => model
+  },
+
 
   {
     :name => "White silk",
@@ -257,6 +300,25 @@ Spree::OptionValue.create!([
     :position =>14,
     :option_type => color,
   },
+  {
+    :name => "Ash vanilla",
+    :presentation => I18n.t('option_values.ash_vanilla'),
+    :position =>15,
+    :option_type => color,
+  },
+  {
+    :name => "Mahogany mocha",
+    :presentation => I18n.t('option_values.mahogany_mocha'),
+    :position =>16,
+    :option_type => color,
+  },
+  {
+    :name => "Anegry chocolate",
+    :presentation => I18n.t('option_values.anegry_chocolate'),
+    :position =>17,
+    :option_type => color,
+  },
+
 
 
   {

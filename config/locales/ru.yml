@@ -21,6 +21,9 @@ ru:
     anegri: Анегри
     anegri_dark_varnish: Анегри темный лак
     nut: Орех
+    ash_vanilla: Ясень ваниль
+    mahogany_mocha: Красное дерево мокко
+    anegry_chocolate: Анегри шоколад
     satin_autor_paint: Сатинированное стекло с авторским рисунком «прованс»
     satin_autor_paint_vin: Сатинированное стекло с авторским рисунком «виньетка»
     satin_autor_paint_dam: Сатинированное стекло с авторским рисунком «дамаск»
@@ -32,6 +35,8 @@ ru:
     oak_veneer: шпон дуба
     nut_veneer: шпон ореха
     anegri_veneer: шпон анегри
+    ash_veneer: шпон ясеня
+    mahogany_veneer: шпон красного дерева
   variants:
     white_silk: БШ
     ivory: СК
@@ -47,3 +52,6 @@ ru:
     anegri: АН
     anegri_dark_varnish: АН ТЛ
     nut: ОР
+    ash_vanilla: ЯСВ
+    mahogany_mocha: КДМ
+    anegry_chocolate: АНШ
