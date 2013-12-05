@@ -1,3 +1,57 @@
 ru:
   spree:
     shop_name: Интернет - салон дверей "ВОЛХОВЕЦ"
+  product_description: "<p><span>Цена за базовый комплект одностворчатой двери&nbsp;</span><br /><span>(Размер: 600/700/800/900 x 2000 мм, 600*1900 мм (глухое полотно)) </span><br /><br /><span>Базовый комплект включает:&nbsp;</span><br /><span>1. Полотно;&nbsp;</span><br /><span>2. Коробка;&nbsp;</span><br /><span>3. Наличники на две стороны (5 шт.)&nbsp;</span><br /><span>4. Комплект фурнитуры: карточные петли (2шт.), магнитный замок AGB</span></p>"
+  option_types:
+    model: Модель
+    color: Цвет
+    glass: Стекло
+  option_values:
+    white_silk: Белый шелк
+    ivory: Слоновая кость
+    walnut_modena: Орех Модена
+    patina_antique: Патина Античная
+    beech_nut: Бук орех
+    beech_ivory: Бук слоновая кость
+    beech_wenge: Бук венге
+    white_oak: Дуб беленый
+    bog_oak: Дуб мореный
+    wenge: Венге
+    cream_oak: Дуб кремовый
+    anegri: Анегри
+    anegri_dark_varnish: Анегри темный лак
+    nut: Орех
+    ash_vanilla: Ясень ваниль
+    mahogany_mocha: Красное дерево мокко
+    anegry_chocolate: Анегри шоколад
+    satin_autor_paint: Сатинированное стекло с авторским рисунком «прованс»
+    satin_autor_paint_vin: Сатинированное стекло с авторским рисунком «виньетка»
+    satin_autor_paint_dam: Сатинированное стекло с авторским рисунком «дамаск»
+    satin_loft: Сатинированное стекло лофт
+    satin: Сатиновое стекло
+  product_properties:
+    material: Материал
+    solid_beech: массив бука
+    oak_veneer: шпон дуба
+    nut_veneer: шпон ореха
+    anegri_veneer: шпон анегри
+    ash_veneer: шпон ясеня
+    mahogany_veneer: шпон красного дерева
+  variants:
+    white_silk: БШ
+    ivory: СК
+    walnut_modena: ОРМ
+    patina_antique: ПАН
+    beech_nut: БОР
+    beech_ivory: БСК
+    beech_wenge: БВ
+    white_oak: ДБЕ
+    bog_oak: ДМ
+    wenge: В
+    cream_oak: ДК
+    anegri: АН
+    anegri_dark_varnish: АН ТЛ
+    nut: ОР
+    ash_vanilla: ЯСВ
+    mahogany_mocha: КДМ
+    anegry_chocolate: АНШ
