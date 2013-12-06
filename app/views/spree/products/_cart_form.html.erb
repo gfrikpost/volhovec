@@ -4,10 +4,24 @@
     <% model = {} %>
     <% color = {} %>
     <% glass = {} %>
-    
+
     <% if @product.variants_and_option_values(current_currency).any? %>
       <div id="product-variants" class="columns five alpha">
         <h6 class="product-section-title"><%= Spree.t(:variants) %></h6>
+          <% @product.variants_and_option_values(current_currency).each_with_index do |variant, index| %>
+            <table id="option_values_variant_<%= variant.id %>" class="product-variants-table table-display" data-hook>
+              <tbody>
+                <% variant.option_values.each do |o_val| %>
+                  <% css_class = cycle('even', 'odd', :name => "properties") %>
+                  <tr class="<%= css_class %>">
+                    <td><strong><%= o_val.option_type.presentation %></strong></td>
+                    <td><%= o_val.presentation %></td>
+                  </tr>
+                <% end %>
+                <% reset_cycle('properties') %>
+              </tbody>
+            </table>
+          <% end %>
         <ul>
           <% @product.variants_and_option_values(current_currency).each_with_index do |variant, index| %>
             <li>
@@ -25,7 +39,7 @@
               <% model[o_val.presentation] = o_val.id if o_val.option_type.name == "model" %>
               <% color[o_val.presentation] = o_val.id if o_val.option_type.name == "color" %>
               <% glass[o_val.presentation] = o_val.id if o_val.option_type.name == "glass" %>
-            <% end %>    
+            <% end %>
           <% end%>
           <% @product.option_types.each do |type| %>
             <% collect = model if type.name == "model" %>
@@ -34,7 +48,7 @@
             <li>
               <label><%= type.presentation %></label>
               <%= select_tag 'select', options_for_select(collect) %>
-            </li> 
+            </li>
           <% end %>
         </ul>
       </div>
@@ -42,7 +56,7 @@
 
     <% if @product.price_in(current_currency) and !@product.price.nil? %>
       <div data-hook="product_price" class="columns five <% if !@product.has_variants? %> alpha <% else %> omega <% end %>">
-        
+
         <div id="product-price">
           <h6 class="product-section-title"><%= Spree.t(:price) %></h6>
           <div>
@@ -54,7 +68,7 @@
 
           <% if @product.master.in_stock? %>
             <link itemprop="availability" href="http://schema.org/InStock" />
-          <% end %> 
+          <% end %>
         </div>
 
         <div class="add-to-cart">
@@ -70,6 +84,6 @@
           <br>
           <div><span class="price selling" itemprop="price"><%= Spree.t('product_not_available_in_this_currency') %></span></div>
         </div>
-    <% end %>    
+    <% end %>
   </div>
 <% end %>
