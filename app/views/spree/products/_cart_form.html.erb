@@ -9,7 +9,7 @@
       <div id="product-variants" class="columns five alpha">
         <h6 class="product-section-title"><%= Spree.t(:variants) %></h6>
           <% @product.variants_and_option_values(current_currency).each_with_index do |variant, index| %>
-            <table id="option_values_variant_<%= variant.id %>" class="product-variants-table table-display" data-hook>
+            <table id="option_values_variant_<%= variant.id %>" class="product-variants-table table-display" data-price="<%= display_price(variant) %>" data-hook>
               <tbody>
                 <% variant.option_values.each do |o_val| %>
                   <% css_class = cycle('even', 'odd', :name => "properties") %>
@@ -74,6 +74,7 @@
         <div class="add-to-cart">
           <%= number_field_tag (@product.variants_and_option_values.any? ? :quantity : "variants[#{@product.master.id}]"),
             1, :class => 'title', :min => 1 %>
+          <%= hidden_field_tag "products[#{@product.id}]", @product.variants.first.id, { id: "submited_variant" } %>
           <%= button_tag :class => 'large primary', :id => 'add-to-cart-button', :type => :submit do %>
             <%= Spree.t(:add_to_cart) %>
           <% end %>
