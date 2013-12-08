@@ -25,10 +25,8 @@ $ ->
       ($ '#submited_variant').val(($ '.selected').val())
       
   Spree.showVariantImages = (variantId) ->
-    ###
-      ($ 'li.vtmb').hide()
-      ($ 'li.tmb-' + variantId).show()
-    ###
+    ###($ 'li.vtmb').hide()###
+    ###($ 'li.tmb-' + variantId).show()###
     ($ '.product-variants-table').hide()
     ($ '#option_values_variant_' + variantId).show()
     currentThumb = ($ '#' + ($ '#main-image').data('selectedThumbId'))
@@ -51,14 +49,23 @@ $ ->
   Spree.updateVariantPrice = (variant) ->
     variantPrice = variant.data('price')
     ($ '.price.selling').text(variantPrice) if variantPrice
-  radios = ($ '#product-variants input[type="radio"]')
-
-  if radios.length > 0
-    Spree.showVariantImages ($ '#product-variants input[type="radio"]').eq(0).attr('value')
-    Spree.updateVariantPrice radios.first()
+  
+  tables = ($ '#product-variants table')
+    
+  if tables.length > 0
+    Spree.showVariantImages ($ '#product-variants table').eq(0).attr('data-variant_id')
+    Spree.updateVariantPrice tables.first()
 
   Spree.addImageHandlers()
 
-  radios.click (event) ->
+  ###radios = ($ '#product-variants input[type="radio"]')###
+
+  ###if radios.length > 0
+    Spree.showVariantImages ($ '#product-variants input[type="radio"]').eq(0).attr('value')
+    Spree.updateVariantPrice radios.first()###
+
+  ###Spree.addImageHandlers()###
+
+  ###radios.click (event) ->
     Spree.showVariantImages @value
-    Spree.updateVariantPrice ($ this)
+    Spree.updateVariantPrice ($ this)###
