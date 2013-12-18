@@ -11,3 +11,4 @@
 
 //= require_tree .
 //= require store/spree_i18n
+//= require store/product
