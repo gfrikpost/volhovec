@@ -6,6 +6,7 @@ ru:
     model: Модель
     color: Цвет
     glass: Стекло
+    material: Материал
   option_values:
     white_silk: Белый шелк
     ivory: Слоновая кость
@@ -32,6 +33,7 @@ ru:
   product_properties:
     material: Материал
     solid_beech: массив бука
+    wenge_veneer: шпон венге
     oak_veneer: шпон дуба
     nut_veneer: шпон ореха
     anegri_veneer: шпон анегри

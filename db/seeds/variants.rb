@@ -1,11 +1,13 @@
+# BEGIN Products
 galant = Spree::Product.find_by_name!("Galant")
 prio = Spree::Product.find_by_name!("Prio")
 legend = Spree::Product.find_by_name!("Legend")
 modum = Spree::Product.find_by_name!("Modum")
 tekton = Spree::Product.find_by_name!("Tekton")
 nuance = Spree::Product.find_by_name!("Nuance")
+# END Products
 
-
+# BEGIN Models
 m7021 = Spree::OptionValue.find_by_name!("7021")
 m7024 = Spree::OptionValue.find_by_name!("7024")
 m7121 = Spree::OptionValue.find_by_name!("7121")
@@ -44,10 +46,21 @@ m3025 = Spree::OptionValue.find_by_name!("3025")
 m3026 = Spree::OptionValue.find_by_name!("3026")
 m3027 = Spree::OptionValue.find_by_name!("3027")
 m3028 = Spree::OptionValue.find_by_name!("3028")
+# END Models
 
+# BEGIN Materials
+ciplex = Spree::OptionValue.find_by_name!("ciplex")
+solid_beech = Spree::OptionValue.find_by_name!("solid beech")
+wenge_veneer = Spree::OptionValue.find_by_name!("wenge veneer")
+oak_veneer = Spree::OptionValue.find_by_name!("oak veneer")
+nut_veneer = Spree::OptionValue.find_by_name!("nut veneer")
+anegri_veneer = Spree::OptionValue.find_by_name!("anegri veneer")
+ash_veneer = Spree::OptionValue.find_by_name!("ash veneer")
+mahogany_veneer = Spree::OptionValue.find_by_name!("mahogany veneer")
 
+# END Materials
 
-
+# BEGIN Colors
 white_silk = Spree::OptionValue.find_by_name!("White silk")
 ivory = Spree::OptionValue.find_by_name!("Ivory")
 walnut_modena = Spree::OptionValue.find_by_name!("Walnut Modena")
@@ -69,97 +82,98 @@ nut = Spree::OptionValue.find_by_name!("Nut")
 ash_vanilla = Spree::OptionValue.find_by_name!("Ash vanilla")
 mahogany_mocha = Spree::OptionValue.find_by_name!("Mahogany mocha")
 anegry_chocolate = Spree::OptionValue.find_by_name!("Anegry chocolate")
+# END Colors
 
-
+# BEGIN Glass
 satin_ap = Spree::OptionValue.find_by_name!("Satin-autor-paint")
 satin_l = Spree::OptionValue.find_by_name!("Satin-loft")
 satin = Spree::OptionValue.find_by_name!("Satin")
 satin_apv = Spree::OptionValue.find_by_name!("Satin-autor-paint-vin")
 satin_apd = Spree::OptionValue.find_by_name!("Satin-autor-paint-dam")
-
+# END Glass
 
 variants = [
   {
     :product => galant,
-    :option_values => [m7021, white_silk],
+    :option_values => [m7021, ciplex, white_silk],
     :sku => "7021 #{I18n.t('variants.white_silk')}",
     :cost_price => 11995
   },
   {
     :product => galant,
-    :option_values => [m7021, ivory],
+    :option_values => [m7021, ciplex, ivory],
     :sku => "7021 #{I18n.t('variants.ivory')}",
     :cost_price => 11995
   },
   {
     :product => galant,
-    :option_values => [m7024 ,white_silk, satin_ap],
+    :option_values => [m7024, ciplex, white_silk, satin_ap],
     :sku => "7024 #{I18n.t('variants.white_silk')}40",
     :cost_price => 13995
   },
   {
     :product => galant,
-    :option_values => [m7024, white_silk, satin_l],
+    :option_values => [m7024, ciplex, white_silk, satin_l],
     :sku => "7024 #{I18n.t('variants.white_silk')}23",
     :cost_price => 12995
   },
   {
     :product => galant,
-    :option_values => [m7024, white_silk, satin],
+    :option_values => [m7024, ciplex, white_silk, satin],
     :sku => "7024 #{I18n.t('variants.white_silk')}02",
     :cost_price => 13295
   },
   {
     :product => galant,
-    :option_values => [m7024, ivory, satin_ap],
+    :option_values => [m7024, ciplex, ivory, satin_ap],
     :sku => "7024 #{I18n.t('variants.ivory')}40",
     :cost_price => 13995
   },
   {
     :product => galant,
-    :option_values => [m7024, ivory, satin_l],
+    :option_values => [m7024, ciplex, ivory, satin_l],
     :sku => "7024 #{I18n.t('variants.ivory')}23",
     :cost_price => 12995
   },
   {
     :product => galant,
-    :option_values => [m7024, ivory, satin],
+    :option_values => [m7024, ciplex, ivory, satin],
     :sku => "7024 #{I18n.t('variants.ivory')}02",
     :cost_price => 13295
   },
   {
     :product => galant,
-    :option_values => [m7132, white_silk, satin_ap],
+    :option_values => [m7132, ciplex, white_silk, satin_ap],
     :sku => "7132 #{I18n.t('variants.white_silk')}41",
     :cost_price => 12995
   },
   {
     :product => galant,
-    :option_values => [m7132, white_silk, satin],
+    :option_values => [m7132, ciplex, white_silk, satin],
     :sku => "7132 #{I18n.t('variants.white_silk')}02",
     :cost_price => 11995
   },
   {
     :product => galant,
-    :option_values => [m7132, ivory, satin_ap],
+    :option_values => [m7132, ciplex, ivory, satin_ap],
     :sku => "7132 #{I18n.t('variants.ivory')}41",
     :cost_price => 12995
   },
   {
     :product => galant,
-    :option_values => [m7132, ivory, satin],
+    :option_values => [m7132, ciplex, ivory, satin],
     :sku => "7132 #{I18n.t('variants.ivory')}02",
     :cost_price => 11995
   },
   {
     :product => galant,
-    :option_values => [m7131, white_silk],
+    :option_values => [m7131, ciplex, white_silk],
     :sku => "7131 #{I18n.t('variants.white_silk')}",
     :cost_price => 11495
   },
   {
     :product => galant,
-    :option_values => [m7131, ivory],
+    :option_values => [m7131, ciplex, ivory],
     :sku => "7131 #{I18n.t('variants.ivory')}",
     :cost_price => 11495
   },
@@ -167,73 +181,73 @@ variants = [
 
   {
     :product => prio,
-    :option_values => [m7131, walnut_modena],
+    :option_values => [m7131, ciplex, walnut_modena],
     :sku => "7131 #{I18n.t('variants.walnut_modena')}",
     :cost_price => 9995
   },
   {
     :product => prio,
-    :option_values => [m7131, patina_antique],
+    :option_values => [m7131, ciplex, patina_antique],
     :sku => "7131 #{I18n.t('variants.patina_antique')}",
     :cost_price => 10495
   },
   {
     :product => prio,
-    :option_values => [m7132, walnut_modena, satin_apd],
+    :option_values => [m7132, ciplex, walnut_modena, satin_apd],
     :sku => "7132 #{I18n.t('variants.walnut_modena')}31",
     :cost_price => 10495
   },
   {
     :product => prio,
-    :option_values => [m7132, walnut_modena, satin_apv],
+    :option_values => [m7132, ciplex, walnut_modena, satin_apv],
     :sku => "7132 #{I18n.t('variants.walnut_modena')}25",
     :cost_price => 10495
   },
   {
     :product => prio,
-    :option_values => [m7132, patina_antique, satin_apd],
+    :option_values => [m7132, ciplex, patina_antique, satin_apd],
     :sku => "7132 #{I18n.t('variants.patina_antique')}31",
     :cost_price => 10995
   },
   {
     :product => prio,
-    :option_values => [m7132, patina_antique, satin_apv],
+    :option_values => [m7132, ciplex, patina_antique, satin_apv],
     :sku => "7132 #{I18n.t('variants.patina_antique')}25",
     :cost_price => 10995
   },
   {
     :product => prio,
-    :option_values => [m7121, walnut_modena],
+    :option_values => [m7121, ciplex, walnut_modena],
     :sku => "7121 #{I18n.t('variants.walnut_modena')}",
     :cost_price => 8995
   },
   {
     :product => prio,
-    :option_values => [m7121, patina_antique],
+    :option_values => [m7121, ciplex, patina_antique],
     :sku => "7121 #{I18n.t('variants.patina_antique')}",
     :cost_price => 9495
   },
   {
     :product => prio,
-    :option_values => [m7122, walnut_modena, satin_l],
+    :option_values => [m7122, ciplex, walnut_modena, satin_l],
     :sku => "7122 #{I18n.t('variants.walnut_modena')}21",
     :cost_price => 9995
   },
   {
     :product => prio,
-    :option_values => [m7122, walnut_modena, satin_apv],
+    :option_values => [m7122, ciplex, walnut_modena, satin_apv],
     :sku => "7122 #{I18n.t('variants.walnut_modena')}25",
     :cost_price => 9995
   },
   {
     :product => prio,
-    :option_values => [m7122, patina_antique, satin_l],
+    :option_values => [m7122, ciplex, patina_antique, satin_l],
     :sku => "7122 #{I18n.t('variants.patina_antique')}21",
     :cost_price => 10495
   },
   {
     :product => prio,
-    :option_values => [m7122, patina_antique, satin_apv],
+    :option_values => [m7122, ciplex, patina_antique, satin_apv],
     :sku => "7122 #{I18n.t('variants.patina_antique')}25",
     :cost_price => 10495
   },
@@ -241,91 +255,91 @@ variants = [
 
   {
     :product => legend,
-    :option_values => [m0130, beech_nut],
+    :option_values => [m0130, solid_beech, beech_nut],
     :sku => "0130#{I18n.t('variants.beech_nut')}",
     :cost_price => 29995
   },
   {
     :product => legend,
-    :option_values => [m0130, beech_ivory],
+    :option_values => [m0130, solid_beech, beech_ivory],
     :sku => "0130#{I18n.t('variants.beech_ivory')}",
     :cost_price => 29995
   },
   {
     :product => legend,
-    :option_values => [m0130, beech_wenge],
+    :option_values => [m0130, solid_beech, beech_wenge],
     :sku => "0130#{I18n.t('variants.beech_wenge')}",
     :cost_price => 29995
   },
   {
     :product => legend,
-    :option_values => [m0131, beech_nut],
+    :option_values => [m0131, solid_beech, beech_nut],
     :sku => "0131#{I18n.t('variants.beech_nut')}",
     :cost_price => 29995
   },
   {
     :product => legend,
-    :option_values => [m0131, beech_ivory],
+    :option_values => [m0131, solid_beech, beech_ivory],
     :sku => "0131#{I18n.t('variants.beech_ivory')}",
     :cost_price => 29995
   },
   {
     :product => legend,
-    :option_values => [m0131, beech_wenge],
+    :option_values => [m0131, solid_beech, beech_wenge],
     :sku => "0131#{I18n.t('variants.beech_wenge')}",
     :cost_price => 29995
   },
   {
     :product => legend,
-    :option_values => [m0132, beech_nut],
+    :option_values => [m0132, solid_beech, beech_nut],
     :sku => "0132#{I18n.t('variants.beech_nut')}",
     :cost_price => 29995
   },
   {
     :product => legend,
-    :option_values => [m0132, beech_ivory],
+    :option_values => [m0132, solid_beech, beech_ivory],
     :sku => "0132#{I18n.t('variants.beech_ivory')}",
     :cost_price => 29995
   },
   {
     :product => legend,
-    :option_values => [m0132, beech_wenge],
+    :option_values => [m0132, solid_beech, beech_wenge],
     :sku => "0132#{I18n.t('variants.beech_wenge')}",
     :cost_price => 29995
   },
   {
     :product => legend,
-    :option_values => [m0140, beech_nut],
+    :option_values => [m0140, solid_beech, beech_nut],
     :sku => "0140#{I18n.t('variants.beech_nut')}",
     :cost_price => 29995
   },
   {
     :product => legend,
-    :option_values => [m0140, beech_ivory],
+    :option_values => [m0140, solid_beech, beech_ivory],
     :sku => "0140#{I18n.t('variants.beech_ivory')}",
     :cost_price => 29995
   },
   {
     :product => legend,
-    :option_values => [m0140, beech_wenge],
+    :option_values => [m0140, solid_beech, beech_wenge],
     :sku => "0140#{I18n.t('variants.beech_wenge')}",
     :cost_price => 29995
   },
   {
     :product => legend,
-    :option_values => [m0141, beech_nut],
+    :option_values => [m0141, solid_beech, beech_nut],
     :sku => "0141#{I18n.t('variants.beech_nut')}",
     :cost_price => 29995
   },
   {
     :product => legend,
-    :option_values => [m0141, beech_ivory],
+    :option_values => [m0141, solid_beech, beech_ivory],
     :sku => "0141#{I18n.t('variants.beech_ivory')}",
     :cost_price => 29995
   },
   {
     :product => legend,
-    :option_values => [m0141, beech_wenge],
+    :option_values => [m0141, solid_beech, beech_wenge],
     :sku => "0141#{I18n.t('variants.beech_wenge')}",
     :cost_price => 29995
   },
@@ -333,73 +347,73 @@ variants = [
 
   {
     :product => modum,
-    :option_values => [m4012, white_oak],
+    :option_values => [m4012 ,oak_veneer, white_oak],
     :sku => "4012#{I18n.t('variants.white_oak')}",
     :cost_price => 12495
   },
   {
     :product => modum,
-    :option_values => [m4012, wenge],
+    :option_values => [m4012, wenge_veneer, wenge],
     :sku => "4012#{I18n.t('variants.wenge')}",
     :cost_price => 15495
   },
   {
     :product => modum,
-    :option_values => [m4016, white_oak],
+    :option_values => [m4016, oak_veneer, white_oak],
     :sku => "4016#{I18n.t('variants.white_oak')}",
     :cost_price => 11995
   },
   {
     :product => modum,
-    :option_values => [m4016, wenge],
+    :option_values => [m4016, wenge_veneer, wenge],
     :sku => "4016#{I18n.t('variants.wenge')}",
     :cost_price => 14995
   },
   {
     :product => modum,
-    :option_values => [m4017, white_oak],
+    :option_values => [m4017, oak_veneer, white_oak],
     :sku => "4017#{I18n.t('variants.white_oak')}",
     :cost_price => 11795
   },
   {
     :product => modum,
-    :option_values => [m4017, wenge],
+    :option_values => [m4017, wenge_veneer, wenge],
     :sku => "4017#{I18n.t('variants.wenge')}",
     :cost_price => 14795
   },
   {
     :product => modum,
-    :option_values => [m4021, bog_oak],
+    :option_values => [m4021, oak_veneer, bog_oak],
     :sku => "4021#{I18n.t('variants.bog_oak')}",
     :cost_price => 12995
   },
   {
     :product => modum,
-    :option_values => [m4021, cream_oak],
+    :option_values => [m4021, oak_veneer, cream_oak],
     :sku => "4021#{I18n.t('variants.cream_oak')}",
     :cost_price => 12995
   },
   {
     :product => modum,
-    :option_values => [m4023, bog_oak],
+    :option_values => [m4023, oak_veneer, bog_oak],
     :sku => "4023#{I18n.t('variants.bog_oak')}",
     :cost_price => 13995
   },
   {
     :product => modum,
-    :option_values => [m4023, cream_oak],
+    :option_values => [m4023, oak_veneer, cream_oak],
     :sku => "4023#{I18n.t('variants.cream_oak')}",
     :cost_price => 13995
   },
   {
     :product => modum,
-    :option_values => [m4024, bog_oak],
+    :option_values => [m4024, oak_veneer, bog_oak],
     :sku => "4024#{I18n.t('variants.bog_oak')}",
     :cost_price => 14995
   },
   {
     :product => modum,
-    :option_values => [m4024, cream_oak],
+    :option_values => [m4024, oak_veneer, cream_oak],
     :sku => "4024#{I18n.t('variants.cream_oak')}",
     :cost_price => 14995
   },
@@ -407,109 +421,109 @@ variants = [
 
   {
     :product => tekton,
-    :option_values => [m2051, anegri],
+    :option_values => [m2051, anegri_veneer, anegri],
     :sku => "2051#{I18n.t('variants.anegri')}",
     :cost_price => 12995
   },
   {
     :product => tekton,
-    :option_values => [m2051, anegri_dark_varnish],
+    :option_values => [m2051, anegri_veneer, anegri_dark_varnish],
     :sku => "2051#{I18n.t('variants.anegri_dark_varnish')}",
     :cost_price => 12995
   },
   {
     :product => tekton,
-    :option_values => [m2052, anegri],
+    :option_values => [m2052, anegri_veneer, anegri],
     :sku => "2052#{I18n.t('variants.anegri')}",
     :cost_price => 13995
   },
   {
     :product => tekton,
-    :option_values => [m2052, anegri_dark_varnish],
+    :option_values => [m2052, anegri_veneer, anegri_dark_varnish],
     :sku => "2052#{I18n.t('variants.anegri_dark_varnish')}",
     :cost_price => 13995
   },
   {
     :product => tekton,
-    :option_values => [m2054, anegri],
+    :option_values => [m2054, anegri_veneer, anegri],
     :sku => "2054#{I18n.t('variants.anegri')}",
     :cost_price => 14495
   },
   {
     :product => tekton,
-    :option_values => [m2054, anegri_dark_varnish],
+    :option_values => [m2054, anegri_veneer, anegri_dark_varnish],
     :sku => "2054#{I18n.t('variants.anegri_dark_varnish')}",
     :cost_price => 14995
   },
   {
     :product => tekton,
-    :option_values => [m2021, anegri],
+    :option_values => [m2021, anegri_veneer, anegri],
     :sku => "2021#{I18n.t('variants.anegri')}",
     :cost_price => 11995
   },
   {
     :product => tekton,
-    :option_values => [m2021, anegri_dark_varnish],
+    :option_values => [m2021, anegri_veneer, anegri_dark_varnish],
     :sku => "2021#{I18n.t('variants.anegri_dark_varnish')}",
     :cost_price => 11995
   },
   {
     :product => tekton,
-    :option_values => [m2024, anegri],
+    :option_values => [m2024, anegri_veneer, anegri],
     :sku => "2024#{I18n.t('variants.anegri')}",
     :cost_price => 12495
   },
   {
     :product => tekton,
-    :option_values => [m2024, anegri_dark_varnish],
+    :option_values => [m2024, anegri_veneer, anegri_dark_varnish],
     :sku => "2024#{I18n.t('variants.anegri_dark_varnish')}",
     :cost_price => 12495
   },
   {
     :product => tekton,
-    :option_values => [m2061, anegri],
+    :option_values => [m2061, anegri_veneer, anegri],
     :sku => "2061#{I18n.t('variants.anegri')}",
     :cost_price => 13495
   },
   {
     :product => tekton,
-    :option_values => [m2061, nut],
+    :option_values => [m2061, nut_veneer, nut],
     :sku => "2061#{I18n.t('variants.nut')}",
     :cost_price => 13495
   },
   {
     :product => tekton,
-    :option_values => [m2062, anegri],
+    :option_values => [m2062, anegri_veneer, anegri],
     :sku => "2062#{I18n.t('variants.anegri')}",
     :cost_price => 14495
   },
   {
     :product => tekton,
-    :option_values => [m2062, nut],
+    :option_values => [m2062, nut_veneer, nut],
     :sku => "2062#{I18n.t('variants.nut')}",
     :cost_price => 14995
   },
   {
     :product => tekton,
-    :option_values => [m2064, anegri],
+    :option_values => [m2064, anegri_veneer, anegri],
     :sku => "2064#{I18n.t('variants.anegri')}",
     :cost_price => 14495
   },
   {
     :product => tekton,
-    :option_values => [m2064, nut],
+    :option_values => [m2064, nut_veneer, nut],
     :sku => "2064#{I18n.t('variants.nut')}",
     :cost_price => 14995
   },
   {
     :product => tekton,
-    :option_values => [m2041, nut],
+    :option_values => [m2041, nut_veneer, nut],
     :sku => "2041#{I18n.t('variants.nut')}",
     :cost_price => 12995
   },
   {
     :product => tekton,
-    :option_values => [m2042, nut],
+    :option_values => [m2042, nut_veneer, nut],
     :sku => "2042#{I18n.t('variants.nut')}",
     :cost_price => 13495
   },
@@ -517,127 +531,127 @@ variants = [
 
   {
     :product => nuance,
-    :option_values => [m3020, ash_vanilla],
+    :option_values => [m3020, ash_veneer, ash_vanilla],
     :sku => "3020#{I18n.t('variants.ash_vanilla')}",
     :cost_price => 9995
   },
   {
     :product => nuance,
-    :option_values => [m3020, mahogany_mocha],
+    :option_values => [m3020, mahogany_veneer, mahogany_mocha],
     :sku => "3020#{I18n.t('variants.mahogany_mocha')}",
     :cost_price => 9995
   },
   {
     :product => nuance,
-    :option_values => [m3020, anegry_chocolate],
+    :option_values => [m3020, anegri_veneer, anegry_chocolate],
     :sku => "3020#{I18n.t('variants.anegry_chocolate')}",
     :cost_price => 9995
   },
   {
     :product => nuance,
-    :option_values => [m3023, ash_vanilla],
+    :option_values => [m3023, ash_veneer, ash_vanilla],
     :sku => "3023#{I18n.t('variants.ash_vanilla')}",
     :cost_price => 11495
   },
   {
     :product => nuance,
-    :option_values => [m3023, mahogany_mocha],
+    :option_values => [m3023, mahogany_veneer, mahogany_mocha],
     :sku => "3023#{I18n.t('variants.mahogany_mocha')}",
     :cost_price => 11495
   },
   {
     :product => nuance,
-    :option_values => [m3023, anegry_chocolate],
+    :option_values => [m3023, anegri_veneer, anegry_chocolate],
     :sku => "3023#{I18n.t('variants.anegry_chocolate')}",
     :cost_price => 11495
   },
   {
     :product => nuance,
-    :option_values => [m3024, ash_vanilla],
+    :option_values => [m3024, ash_veneer, ash_vanilla],
     :sku => "3024#{I18n.t('variants.ash_vanilla')}",
     :cost_price => 11995
   },
   {
     :product => nuance,
-    :option_values => [m3024, mahogany_mocha],
+    :option_values => [m3024, mahogany_veneer, mahogany_mocha],
     :sku => "3024#{I18n.t('variants.mahogany_mocha')}",
     :cost_price => 11995
   },
   {
     :product => nuance,
-    :option_values => [m3024, anegry_chocolate],
+    :option_values => [m3024, anegri_veneer, anegry_chocolate],
     :sku => "3024#{I18n.t('variants.anegry_chocolate')}",
     :cost_price => 11995
   },
   {
     :product => nuance,
-    :option_values => [m3025, ash_vanilla],
+    :option_values => [m3025, ash_veneer, ash_vanilla],
     :sku => "3025#{I18n.t('variants.ash_vanilla')}",
     :cost_price => 11495
   },
   {
     :product => nuance,
-    :option_values => [m3025, mahogany_mocha],
+    :option_values => [m3025, mahogany_veneer, mahogany_mocha],
     :sku => "3025#{I18n.t('variants.mahogany_mocha')}",
     :cost_price => 11495
   },
   {
     :product => nuance,
-    :option_values => [m3025, anegry_chocolate],
+    :option_values => [m3025, anegri_veneer, anegry_chocolate],
     :sku => "3025#{I18n.t('variants.anegry_chocolate')}",
     :cost_price => 11495
   },
   {
     :product => nuance,
-    :option_values => [m3026, ash_vanilla],
+    :option_values => [m3026, ash_veneer, ash_vanilla],
     :sku => "3026#{I18n.t('variants.ash_vanilla')}",
     :cost_price => 11995
   },
   {
     :product => nuance,
-    :option_values => [m3026, mahogany_mocha],
+    :option_values => [m3026, mahogany_veneer, mahogany_mocha],
     :sku => "3026#{I18n.t('variants.mahogany_mocha')}",
     :cost_price => 11995
   },
   {
     :product => nuance,
-    :option_values => [m3026, anegry_chocolate],
+    :option_values => [m3026, anegri_veneer, anegry_chocolate],
     :sku => "3026#{I18n.t('variants.anegry_chocolate')}",
     :cost_price => 11995
   },
   {
     :product => nuance,
-    :option_values => [m3027, ash_vanilla],
+    :option_values => [m3027, ash_veneer, ash_vanilla],
     :sku => "3027#{I18n.t('variants.ash_vanilla')}",
     :cost_price => 12995
   },
   {
     :product => nuance,
-    :option_values => [m3027, mahogany_mocha],
+    :option_values => [m3027, mahogany_veneer, mahogany_mocha],
     :sku => "3027#{I18n.t('variants.mahogany_mocha')}",
     :cost_price => 12995
   },
   {
     :product => nuance,
-    :option_values => [m3027, anegry_chocolate],
+    :option_values => [m3027, anegri_veneer, anegry_chocolate],
     :sku => "3027#{I18n.t('variants.anegry_chocolate')}",
     :cost_price => 12995
   },
   {
     :product => nuance,
-    :option_values => [m3028, ash_vanilla],
+    :option_values => [m3028, ash_veneer, ash_vanilla],
     :sku => "3028#{I18n.t('variants.ash_vanilla')}",
     :cost_price => 14995
   },
   {
     :product => nuance,
-    :option_values => [m3028, mahogany_mocha],
+    :option_values => [m3028, mahogany_veneer, mahogany_mocha],
     :sku => "3028#{I18n.t('variants.mahogany_mocha')}",
     :cost_price => 14995
   },
   {
     :product => nuance,
-    :option_values => [m3028, anegry_chocolate],
+    :option_values => [m3028, anegri_veneer, anegry_chocolate],
     :sku => "3028#{I18n.t('variants.anegry_chocolate')}",
     :cost_price => 14995
   },

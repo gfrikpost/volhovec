@@ -6,13 +6,18 @@ Spree::OptionType.create!([
     :position => 1
   },
   {
+    :name => "material",
+    :presentation => I18n.t('option_types.material'),
+    :position => 2
+  },
+  {
     :name => "color",
     :presentation => I18n.t('option_types.color'),
-    :position => 2
+    :position => 3
   },
   {
     :name => "glass",
     :presentation => I18n.t('option_types.glass'),
-    :position => 3
+    :position => 4
   }
 ])

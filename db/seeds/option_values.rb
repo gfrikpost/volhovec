@@ -1,11 +1,13 @@
 load_volhovec_seeds("option_types")
 
 model = Spree::OptionType.find_by_name!("model")
+material = Spree::OptionType.find_by_name!("material")
 color = Spree::OptionType.find_by_name!("color")
 glass = Spree::OptionType.find_by_name!("glass")
 
 Spree::OptionValue.delete_all
 Spree::OptionValue.create!([
+  # BEGIN Models
   {
     :name => "7021",
     :presentation => "7021",
@@ -213,7 +215,60 @@ Spree::OptionValue.create!([
     :position => 31,
     :option_type => model
   },
-
+  # END Models
+  
+  # BEGIN Materials
+  
+  {
+    :name => "ciplex",
+    :presentation => "CIPLEX",
+    :position => 1,
+    :option_type => material,
+  },
+  {
+    :name => "solid beech",
+    :presentation => I18n.t('product_properties.solid_beech'),
+    :position => 2,
+    :option_type => material,
+  },
+  {
+    :name => "wenge veneer",
+    :presentation => I18n.t('product_properties.wenge_veneer'),
+    :position => 3,
+    :option_type => material,
+  },
+  {
+    :name => "oak veneer",
+    :presentation => I18n.t('product_properties.oak_veneer'),
+    :position => 4,
+    :option_type => material,
+  },
+  {
+    :name => "nut veneer",
+    :presentation => I18n.t('product_properties.nut_veneer'),
+    :position => 5,
+    :option_type => material,
+  },
+  {
+    :name => "anegri veneer",
+    :presentation => I18n.t('product_properties.anegri_veneer'),
+    :position => 6,
+    :option_type => material,
+  },
+  {
+    :name => "ash veneer",
+    :presentation => I18n.t('product_properties.ash_veneer'),
+    :position => 7,
+    :option_type => material,
+  },
+  {
+    :name => "mahogany veneer",
+    :presentation => I18n.t('product_properties.mahogany_veneer'),
+    :position => 8,
+    :option_type => material,
+  },
+  
+  # END Materials
 
   {
     :name => "White silk",
