@@ -2,6 +2,7 @@ model = Spree::OptionType.find_by_name!("model")
 material = Spree::OptionType.find_by_name!("material")
 color = Spree::OptionType.find_by_name!("color")
 glass = Spree::OptionType.find_by_name!("glass")
+making_portal = Spree::OptionType.find_by_name!("making portal")
 
 Spree::ProductOptionType.delete_all
 
@@ -12,6 +13,10 @@ galant.save!
 prio = Spree::Product.find_by_name!("Prio")
 prio.option_types = [model, material, color, glass]
 prio.save!
+
+new_classic = Spree::Product.find_by_name!("New Classic")
+new_classic.option_types = [model, material, color, glass, making_portal]
+new_classic.save!
 
 legend = Spree::Product.find_by_name!("Legend")
 legend.option_types = [model, material, color]
@@ -26,5 +31,5 @@ tekton.option_types = [model, material, color]
 tekton.save!
 
 nuance = Spree::Product.find_by_name!("Nuance")
-nuance.option_types = [model, color]
+nuance.option_types = [model, material, color]
 nuance.save!

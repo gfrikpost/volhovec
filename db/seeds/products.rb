@@ -26,6 +26,11 @@ products = [
     :price => 9995
   },
   {
+    :name => "New Classic",
+    :shipping_category => shipping_category,
+    :price => 21995
+  },
+  {
     :name => "Legend",
     :shipping_category => shipping_category,
     :price => 29995

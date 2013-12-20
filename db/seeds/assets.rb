@@ -3,6 +3,7 @@ Spree::Asset.delete_all
 products = {}
 products[:galant] = Spree::Product.find_by_name!("Galant")
 products[:prio] = Spree::Product.find_by_name!("Prio")
+products[:new_classic] = Spree::Product.find_by_name!("New Classic")
 products[:legend] = Spree::Product.find_by_name!("Legend")
 products[:modum] = Spree::Product.find_by_name!("Modum")
 products[:tekton] = Spree::Product.find_by_name!("Tekton")
@@ -64,6 +65,24 @@ products[:prio].variants.each do |variant|
   p "PRIO_#{model}_#{color}" + "#{glass if glass}"
 
   main_image = image("PRIO_#{model}_#{color}" + "#{glass if glass}", "png")
+  variant.images.create!(:attachment => main_image)
+end
+
+products[:new_classic].variants.each do |variant|
+  model = variant.option_value("model")
+
+  color = variant.option_value("color")
+  color = "orex" if color == I18n.t('option_values.nut')
+  color = "vishnya" if color == I18n.t('option_values.cherry')
+  color = "yasen" if color == I18n.t('option_values.ash_vanilla')
+
+  glass = variant.option_value("glass")
+  glass = "_2" if glass == I18n.t('option_values.tempered_satin_paint_rose')
+  glass = "" if glass == I18n.t('option_values.tempered_satin_bevel')
+
+  p "#{model}_#{color}_bez_vsego" + "#{glass if glass}"
+
+  main_image = image("#{model}_#{color}_bez_vsego" + "#{glass if glass}", "png")
   variant.images.create!(:attachment => main_image)
 end
 

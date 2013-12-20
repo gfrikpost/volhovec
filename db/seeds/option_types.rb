@@ -19,5 +19,10 @@ Spree::OptionType.create!([
     :name => "glass",
     :presentation => I18n.t('option_types.glass'),
     :position => 4
+  },
+  {
+    :name => "making portal",
+    :presentation => I18n.t('option_types.making_portal'),
+    :position => 5
   }
 ])

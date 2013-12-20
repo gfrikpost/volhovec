@@ -7,6 +7,7 @@ ru:
     color: Цвет
     glass: Стекло
     material: Материал
+    making_portal: Оформление портала
   option_values:
     white_silk: Белый шелк
     ivory: Слоновая кость
@@ -25,11 +26,15 @@ ru:
     ash_vanilla: Ясень ваниль
     mahogany_mocha: Красное дерево мокко
     anegry_chocolate: Анегри шоколад
+    cherry: Вишня
     satin_autor_paint: Сатинированное стекло с авторским рисунком «прованс»
     satin_autor_paint_vin: Сатинированное стекло с авторским рисунком «виньетка»
     satin_autor_paint_dam: Сатинированное стекло с авторским рисунком «дамаск»
     satin_loft: Сатинированное стекло лофт
     satin: Сатиновое стекло
+    tempered_satin_paint_rose: Закалённое сатинированное стекло с рисунком «Роза»
+    tempered_satin_bevel: Закалённое сатинированное стекло с фацетом
+    trims: Наличники
   product_properties:
     material: Материал
     solid_beech: массив бука
@@ -39,6 +44,7 @@ ru:
     anegri_veneer: шпон анегри
     ash_veneer: шпон ясеня
     mahogany_veneer: шпон красного дерева
+    cherry_veneer: шпон вишни
   variants:
     white_silk: БШ
     ivory: СК
@@ -57,3 +63,4 @@ ru:
     ash_vanilla: ЯСВ
     mahogany_mocha: КДМ
     anegry_chocolate: АНШ
+    cherry: ВШ

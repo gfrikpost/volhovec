@@ -4,6 +4,7 @@ model = Spree::OptionType.find_by_name!("model")
 material = Spree::OptionType.find_by_name!("material")
 color = Spree::OptionType.find_by_name!("color")
 glass = Spree::OptionType.find_by_name!("glass")
+making_portal = Spree::OptionType.find_by_name!("making portal")
 
 Spree::OptionValue.delete_all
 Spree::OptionValue.create!([
@@ -215,6 +216,24 @@ Spree::OptionValue.create!([
     :position => 31,
     :option_type => model
   },
+  {
+    :name => "1151",
+    :presentation => "1151",
+    :position => 32,
+    :option_type => model
+  },
+  {
+    :name => "1152",
+    :presentation => "1152",
+    :position => 33,
+    :option_type => model
+  },
+  {
+    :name => "1153",
+    :presentation => "1153",
+    :position => 34,
+    :option_type => model
+  },
   # END Models
   
   # BEGIN Materials
@@ -267,9 +286,16 @@ Spree::OptionValue.create!([
     :position => 8,
     :option_type => material,
   },
+  {
+    :name => "cherry veneer",
+    :presentation => I18n.t('product_properties.cherry_veneer'),
+    :position => 9,
+    :option_type => material,
+  },
   
   # END Materials
 
+  # BEGIN Colors
   {
     :name => "White silk",
     :presentation => I18n.t('option_values.white_silk'),
@@ -373,9 +399,15 @@ Spree::OptionValue.create!([
     :position =>17,
     :option_type => color,
   },
+  {
+    :name => "Cherry",
+    :presentation => I18n.t('option_values.cherry'),
+    :position =>18,
+    :option_type => color,
+  },
+# END Colors
 
-
-
+# Begin Glass
   {
     :name => "Satin-autor-paint",
     :presentation => I18n.t('option_values.satin_autor_paint'),
@@ -405,5 +437,27 @@ Spree::OptionValue.create!([
     :presentation => I18n.t('option_values.satin_autor_paint_dam'),
     :position => 5,
     :option_type => glass
-  }
+  },
+  {
+    :name => "Tempered-satin-paint-rose",
+    :presentation => I18n.t('option_values.tempered_satin_paint_rose'),
+    :position => 6,
+    :option_type => glass
+  },
+  {
+    :name => "Tempered-satin-bevel",
+    :presentation => I18n.t('option_values.tempered_satin_bevel'),
+    :position => 7,
+    :option_type => glass
+  },
+# END Glass
+  {
+    :name => "Trims",
+    :presentation => I18n.t('option_values.trims'),
+    :position => 1,
+    :option_type => making_portal
+  },
+# BEGIN Making portal
+
+# END Making portal
 ])

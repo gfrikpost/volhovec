@@ -1,6 +1,7 @@
 # BEGIN Products
 galant = Spree::Product.find_by_name!("Galant")
 prio = Spree::Product.find_by_name!("Prio")
+new_classic = Spree::Product.find_by_name!("New Classic")
 legend = Spree::Product.find_by_name!("Legend")
 modum = Spree::Product.find_by_name!("Modum")
 tekton = Spree::Product.find_by_name!("Tekton")
@@ -20,6 +21,10 @@ m0131 = Spree::OptionValue.find_by_name!("0131")
 m0132 = Spree::OptionValue.find_by_name!("0132")
 m0140 = Spree::OptionValue.find_by_name!("0140")
 m0141 = Spree::OptionValue.find_by_name!("0141")
+
+m1151 = Spree::OptionValue.find_by_name!("1151")
+m1152 = Spree::OptionValue.find_by_name!("1152")
+m1153 = Spree::OptionValue.find_by_name!("1153")
 
 m4012 = Spree::OptionValue.find_by_name!("4012")
 m4016 = Spree::OptionValue.find_by_name!("4016")
@@ -57,6 +62,7 @@ nut_veneer = Spree::OptionValue.find_by_name!("nut veneer")
 anegri_veneer = Spree::OptionValue.find_by_name!("anegri veneer")
 ash_veneer = Spree::OptionValue.find_by_name!("ash veneer")
 mahogany_veneer = Spree::OptionValue.find_by_name!("mahogany veneer")
+cherry_veneer = Spree::OptionValue.find_by_name!("cherry veneer")
 
 # END Materials
 
@@ -82,6 +88,8 @@ nut = Spree::OptionValue.find_by_name!("Nut")
 ash_vanilla = Spree::OptionValue.find_by_name!("Ash vanilla")
 mahogany_mocha = Spree::OptionValue.find_by_name!("Mahogany mocha")
 anegry_chocolate = Spree::OptionValue.find_by_name!("Anegry chocolate")
+
+cherry = Spree::OptionValue.find_by_name!("Cherry")
 # END Colors
 
 # BEGIN Glass
@@ -90,7 +98,13 @@ satin_l = Spree::OptionValue.find_by_name!("Satin-loft")
 satin = Spree::OptionValue.find_by_name!("Satin")
 satin_apv = Spree::OptionValue.find_by_name!("Satin-autor-paint-vin")
 satin_apd = Spree::OptionValue.find_by_name!("Satin-autor-paint-dam")
+tempered_satin_paint_rose = Spree::OptionValue.find_by_name!("Tempered-satin-paint-rose")
+tempered_satin_bevel = Spree::OptionValue.find_by_name!("Tempered-satin-bevel")
 # END Glass
+
+# BEGIN Making portal
+trims = Spree::OptionValue.find_by_name!("Trims")
+# END Making portal
 
 variants = [
   {
@@ -252,6 +266,96 @@ variants = [
     :cost_price => 10495
   },
 
+  {
+    :product => new_classic,
+    :option_values => [m1151, nut_veneer, nut, trims],
+    :sku => "1151 #{I18n.t('variants.nut')}",
+    :cost_price => 21995
+  },
+  {
+    :product => new_classic,
+    :option_values => [m1151, cherry_veneer, cherry, trims],
+    :sku => "1151 #{I18n.t('variants.cherry')}",
+    :cost_price => 21995
+  },
+  {
+    :product => new_classic,
+    :option_values => [m1151, ash_veneer, ash_vanilla, trims],
+    :sku => "1151 #{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 21995
+  },
+  {
+    :product => new_classic,
+    :option_values => [m1152, nut_veneer, nut, tempered_satin_paint_rose, trims],
+    :sku => "1152 #{I18n.t('variants.nut')}",
+    :cost_price => 23995
+  },
+  {
+    :product => new_classic,
+    :option_values => [m1152, nut_veneer, nut, tempered_satin_bevel, trims],
+    :sku => "1152 #{I18n.t('variants.nut')}",
+    :cost_price => 23995
+  },
+  {
+    :product => new_classic,
+    :option_values => [m1152, cherry_veneer, cherry, tempered_satin_paint_rose, trims],
+    :sku => "1152 #{I18n.t('variants.cherry')}",
+    :cost_price => 23995
+  },
+  {
+    :product => new_classic,
+    :option_values => [m1152, cherry_veneer, cherry, tempered_satin_bevel, trims],
+    :sku => "1152 #{I18n.t('variants.cherry')}",
+    :cost_price => 23995
+  },
+  {
+    :product => new_classic,
+    :option_values => [m1152, ash_veneer, ash_vanilla, tempered_satin_paint_rose, trims],
+    :sku => "1152 #{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 23995
+  },
+  {
+    :product => new_classic,
+    :option_values => [m1152, ash_veneer, ash_vanilla, tempered_satin_bevel, trims],
+    :sku => "1152 #{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 23995
+  },
+   {
+    :product => new_classic,
+    :option_values => [m1153, nut_veneer, nut, tempered_satin_paint_rose, trims],
+    :sku => "1153 #{I18n.t('variants.nut')}",
+    :cost_price => 22495
+  },
+  {
+    :product => new_classic,
+    :option_values => [m1153, nut_veneer, nut, tempered_satin_bevel, trims],
+    :sku => "1153 #{I18n.t('variants.nut')}",
+    :cost_price => 24495
+  },
+  {
+    :product => new_classic,
+    :option_values => [m1153, cherry_veneer, cherry, tempered_satin_paint_rose, trims],
+    :sku => "1153 #{I18n.t('variants.cherry')}",
+    :cost_price => 24495
+  },
+  {
+    :product => new_classic,
+    :option_values => [m1153, cherry_veneer, cherry, tempered_satin_bevel, trims],
+    :sku => "1153 #{I18n.t('variants.cherry')}",
+    :cost_price => 24495
+  },
+  {
+    :product => new_classic,
+    :option_values => [m1153, ash_veneer, ash_vanilla, tempered_satin_paint_rose, trims],
+    :sku => "1153 #{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 24495
+  },
+  {
+    :product => new_classic,
+    :option_values => [m1153, ash_veneer, ash_vanilla, tempered_satin_bevel, trims],
+    :sku => "1153 #{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 24495
+  },
 
   {
     :product => legend,
