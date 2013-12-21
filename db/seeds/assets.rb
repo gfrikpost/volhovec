@@ -4,6 +4,7 @@ products = {}
 products[:galant] = Spree::Product.find_by_name!("Galant")
 products[:prio] = Spree::Product.find_by_name!("Prio")
 products[:new_classic] = Spree::Product.find_by_name!("New Classic")
+products[:decanto] = Spree::Product.find_by_name!("Decanto")
 products[:legend] = Spree::Product.find_by_name!("Legend")
 products[:modum] = Spree::Product.find_by_name!("Modum")
 products[:tekton] = Spree::Product.find_by_name!("Tekton")
@@ -83,6 +84,27 @@ products[:new_classic].variants.each do |variant|
   p "#{model}_#{color}_bez_vsego" + "#{glass if glass}"
 
   main_image = image("#{model}_#{color}_bez_vsego" + "#{glass if glass}", "png")
+  variant.images.create!(:attachment => main_image)
+end
+
+products[:decanto].variants.each do |variant|
+  model = variant.option_value("model")
+
+  color = variant.option_value("color")
+  color = "orex_brendi" if color == I18n.t('option_values.walnut_brandy')
+  color = "vishnya_brendi" if color == I18n.t('option_values.cherry_brandy')
+  color = "dub_cognyak" if color == I18n.t('option_values.oak_cognac')
+  color = "red_derevo_bordo" if color == I18n.t('option_values.mahogany_bordo')
+  color = "dub_muscat" if color == I18n.t('option_values.oak_nutmeg')
+  color = "anegri_muscat" if color == I18n.t('option_values.anegry_nutmeg')
+
+  glass = variant.option_value("glass")
+  glass = "_1" if glass == I18n.t('option_values.meandr')
+  glass = "_2" if glass == I18n.t('option_values.shato')
+
+  p "#{model}" + "#{glass if glass}" + "_#{color}" 
+
+  main_image = image("#{model}" + "#{glass if glass}" + "_#{color}", "png")
   variant.images.create!(:attachment => main_image)
 end
 

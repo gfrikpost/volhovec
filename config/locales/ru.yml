@@ -27,6 +27,12 @@ ru:
     mahogany_mocha: Красное дерево мокко
     anegry_chocolate: Анегри шоколад
     cherry: Вишня
+    walnut_brandy: Орех бренди
+    cherry_brandy: Вишня бренди
+    oak_cognac: Дуб коньяк
+    mahogany_bordo: Красное дерево бордо
+    oak_nutmeg: Дуб мускат
+    anegry_nutmeg: Анегри мускат
     satin_autor_paint: Сатинированное стекло с авторским рисунком «прованс»
     satin_autor_paint_vin: Сатинированное стекло с авторским рисунком «виньетка»
     satin_autor_paint_dam: Сатинированное стекло с авторским рисунком «дамаск»
@@ -34,6 +40,8 @@ ru:
     satin: Сатиновое стекло
     tempered_satin_paint_rose: Закалённое сатинированное стекло с рисунком «Роза»
     tempered_satin_bevel: Закалённое сатинированное стекло с фацетом
+    meandr: Меандр
+    shato: Шато
     trims: Наличники
   product_properties:
     material: Материал
@@ -64,3 +72,10 @@ ru:
     mahogany_mocha: КДМ
     anegry_chocolate: АНШ
     cherry: ВШ
+    
+    walnut_brandy: ОРБ
+    cherry_brandy: ВШБ
+    oak_cognac: ДБК
+    mahogany_bordo: КДБ
+    oak_nutmeg: ДБМ
+    anegry_nutmeg: АНМ

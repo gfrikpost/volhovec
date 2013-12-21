@@ -234,6 +234,54 @@ Spree::OptionValue.create!([
     :position => 34,
     :option_type => model
   },
+  {
+    :name => "5021",
+    :presentation => "5021",
+    :position => 35,
+    :option_type => model
+  },
+  {
+    :name => "5022",
+    :presentation => "5022",
+    :position => 36,
+    :option_type => model
+  },
+  {
+    :name => "5071",
+    :presentation => "5071",
+    :position => 37,
+    :option_type => model
+  },
+  {
+    :name => "5072",
+    :presentation => "5072",
+    :position => 38,
+    :option_type => model
+  },
+  {
+    :name => "5091",
+    :presentation => "5091",
+    :position => 39,
+    :option_type => model
+  },
+  {
+    :name => "5092",
+    :presentation => "5092",
+    :position => 40,
+    :option_type => model
+  },
+  {
+    :name => "5101",
+    :presentation => "5101",
+    :position => 41,
+    :option_type => model
+  },
+  {
+    :name => "5102",
+    :presentation => "5102",
+    :position => 42,
+    :option_type => model
+  },
   # END Models
   
   # BEGIN Materials
@@ -405,6 +453,42 @@ Spree::OptionValue.create!([
     :position =>18,
     :option_type => color,
   },
+  {
+    :name => "Walnut brandy",
+    :presentation => I18n.t('option_values.walnut_brandy'),
+    :position =>19,
+    :option_type => color,
+  },
+  {
+    :name => "Cherry brandy",
+    :presentation => I18n.t('option_values.cherry_brandy'),
+    :position =>20,
+    :option_type => color,
+  },
+  {
+    :name => "Oak cognac",
+    :presentation => I18n.t('option_values.oak_cognac'),
+    :position =>21,
+    :option_type => color,
+  },
+  {
+    :name => "Mahogany bordo",
+    :presentation => I18n.t('option_values.mahogany_bordo'),
+    :position =>22,
+    :option_type => color,
+  },
+  {
+    :name => "Oak nutmeg",
+    :presentation => I18n.t('option_values.oak_nutmeg'),
+    :position =>23,
+    :option_type => color,
+  },
+  {
+    :name => "Anegry nutmeg",
+    :presentation => I18n.t('option_values.anegry_nutmeg'),
+    :position =>24,
+    :option_type => color,
+  },
 # END Colors
 
 # Begin Glass
@@ -448,6 +532,18 @@ Spree::OptionValue.create!([
     :name => "Tempered-satin-bevel",
     :presentation => I18n.t('option_values.tempered_satin_bevel'),
     :position => 7,
+    :option_type => glass
+  },
+  {
+    :name => "Meandr",
+    :presentation => I18n.t('option_values.meandr'),
+    :position => 8,
+    :option_type => glass
+  },
+  {
+    :name => "Shato",
+    :presentation => I18n.t('option_values.shato'),
+    :position => 9,
     :option_type => glass
   },
 # END Glass

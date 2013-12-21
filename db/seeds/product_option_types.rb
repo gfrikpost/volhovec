@@ -18,6 +18,10 @@ new_classic = Spree::Product.find_by_name!("New Classic")
 new_classic.option_types = [model, material, color, glass, making_portal]
 new_classic.save!
 
+decanto = Spree::Product.find_by_name!("Decanto")
+decanto.option_types = [model, material, color, glass, making_portal]
+decanto.save!
+
 legend = Spree::Product.find_by_name!("Legend")
 legend.option_types = [model, material, color]
 legend.save!
