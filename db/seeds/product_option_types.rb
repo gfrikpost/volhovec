@@ -22,6 +22,10 @@ decanto = Spree::Product.find_by_name!("Decanto")
 decanto.option_types = [model, material, color, glass, making_portal]
 decanto.save!
 
+interio = Spree::Product.find_by_name!("Interio")
+interio.option_types = [model, material, color, making_portal]
+interio.save!
+
 legend = Spree::Product.find_by_name!("Legend")
 legend.option_types = [model, material, color]
 legend.save!

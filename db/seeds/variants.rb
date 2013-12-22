@@ -3,6 +3,7 @@ galant = Spree::Product.find_by_name!("Galant")
 prio = Spree::Product.find_by_name!("Prio")
 new_classic = Spree::Product.find_by_name!("New Classic")
 decanto = Spree::Product.find_by_name!("Decanto")
+interio = Spree::Product.find_by_name!("Interio")
 legend = Spree::Product.find_by_name!("Legend")
 modum = Spree::Product.find_by_name!("Modum")
 tekton = Spree::Product.find_by_name!("Tekton")
@@ -61,6 +62,17 @@ m3025 = Spree::OptionValue.find_by_name!("3025")
 m3026 = Spree::OptionValue.find_by_name!("3026")
 m3027 = Spree::OptionValue.find_by_name!("3027")
 m3028 = Spree::OptionValue.find_by_name!("3028")
+
+m1121 = Spree::OptionValue.find_by_name!("1121")
+m1122 = Spree::OptionValue.find_by_name!("1122")
+m1123 = Spree::OptionValue.find_by_name!("1123")
+m1124 = Spree::OptionValue.find_by_name!("1124")
+m1125 = Spree::OptionValue.find_by_name!("1125")
+m1126 = Spree::OptionValue.find_by_name!("1126")
+m1127 = Spree::OptionValue.find_by_name!("1127")
+m1128 = Spree::OptionValue.find_by_name!("1128")
+m1132 = Spree::OptionValue.find_by_name!("1132")
+m1133 = Spree::OptionValue.find_by_name!("1133")
 
 # END Models
 
@@ -813,6 +825,175 @@ variants = [
   },
 
   {
+    :product => interio,
+    :option_values => [m1121, mahogany_veneer, mahogany_mocha, trims],
+    :sku => "1121#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 11495
+  },
+  {
+    :product => interio,
+    :option_values => [m1121, anegri_veneer, anegry_chocolate, trims],
+    :sku => "1121#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 11495
+  },
+  {
+    :product => interio,
+    :option_values => [m1121, ash_veneer, ash_vanilla, trims],
+    :sku => "1121#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 11495
+  },
+  {
+    :product => interio,
+    :option_values => [m1122, mahogany_veneer, mahogany_mocha, trims],
+    :sku => "1122#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 12495
+  },
+  {
+    :product => interio,
+    :option_values => [m1122, anegri_veneer, anegry_chocolate, trims],
+    :sku => "1122#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 12495
+  },
+  {
+    :product => interio,
+    :option_values => [m1122, ash_veneer, ash_vanilla, trims],
+    :sku => "1122#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 12495
+  },
+  {
+    :product => interio,
+    :option_values => [m1123, mahogany_veneer, mahogany_mocha, trims],
+    :sku => "1123#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 11495
+  },
+  {
+    :product => interio,
+    :option_values => [m1123, anegri_veneer, anegry_chocolate, trims],
+    :sku => "1123#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 11495
+  },
+  {
+    :product => interio,
+    :option_values => [m1123, ash_veneer, ash_vanilla, trims],
+    :sku => "1123#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 11495
+  },
+  {
+    :product => interio,
+    :option_values => [m1124, mahogany_veneer, mahogany_mocha, trims],
+    :sku => "1124#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 12495
+  },
+  {
+    :product => interio,
+    :option_values => [m1124, anegri_veneer, anegry_chocolate, trims],
+    :sku => "1124#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 12495
+  },
+  {
+    :product => interio,
+    :option_values => [m1124, ash_veneer, ash_vanilla, trims],
+    :sku => "1124#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 12495
+  },
+  {
+    :product => interio,
+    :option_values => [m1125, mahogany_veneer, mahogany_mocha, trims],
+    :sku => "1125#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 12995
+  },
+  {
+    :product => interio,
+    :option_values => [m1125, anegri_veneer, anegry_chocolate, trims],
+    :sku => "1125#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 12995
+  },
+  {
+    :product => interio,
+    :option_values => [m1125, ash_veneer, ash_vanilla, trims],
+    :sku => "1125#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 12995
+  },
+  {
+    :product => interio,
+    :option_values => [m1126, mahogany_veneer, mahogany_mocha, trims],
+    :sku => "1126#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 13995
+  },
+    {
+    :product => interio,
+    :option_values => [m1127, mahogany_veneer, mahogany_mocha, trims],
+    :sku => "1127#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 11495
+  },
+  {
+    :product => interio,
+    :option_values => [m1127, anegri_veneer, anegry_chocolate, trims],
+    :sku => "1127#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 11495
+  },
+  {
+    :product => interio,
+    :option_values => [m1127, ash_veneer, ash_vanilla, trims],
+    :sku => "1127#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 11495
+  },
+    {
+    :product => interio,
+    :option_values => [m1128, mahogany_veneer, mahogany_mocha, trims],
+    :sku => "1128#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 12495
+  },
+  {
+    :product => interio,
+    :option_values => [m1128, anegri_veneer, anegry_chocolate, trims],
+    :sku => "1128#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 12495
+  },
+  {
+    :product => interio,
+    :option_values => [m1128, ash_veneer, ash_vanilla, trims],
+    :sku => "1128#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 12495
+  },
+    {
+    :product => interio,
+    :option_values => [m1132, mahogany_veneer, mahogany_mocha, trims],
+    :sku => "1132#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 13995
+  },
+  {
+    :product => interio,
+    :option_values => [m1132, anegri_veneer, anegry_chocolate, trims],
+    :sku => "1132#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 13995
+  },
+  {
+    :product => interio,
+    :option_values => [m1132, ash_veneer, ash_vanilla, trims],
+    :sku => "1132#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 13995
+  },
+    {
+    :product => interio,
+    :option_values => [m1133, mahogany_veneer, mahogany_mocha, trims],
+    :sku => "1133#{I18n.t('variants.mahogany_mocha')}",
+    :cost_price => 13495
+  },
+  {
+    :product => interio,
+    :option_values => [m1133, anegri_veneer, anegry_chocolate, trims],
+    :sku => "1133#{I18n.t('variants.anegry_chocolate')}",
+    :cost_price => 13495
+  },
+  {
+    :product => interio,
+    :option_values => [m1133, ash_veneer, ash_vanilla, trims],
+    :sku => "1133#{I18n.t('variants.ash_vanilla')}",
+    :cost_price => 13495
+  },
+  
+  {
     :product => legend,
     :option_values => [m0130, solid_beech, beech_nut],
     :sku => "0130#{I18n.t('variants.beech_nut')}",
@@ -1214,6 +1395,7 @@ variants = [
     :sku => "3028#{I18n.t('variants.anegry_chocolate')}",
     :cost_price => 14995
   },
+  
 ]
 
 #masters = {

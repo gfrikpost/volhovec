@@ -282,6 +282,66 @@ Spree::OptionValue.create!([
     :position => 42,
     :option_type => model
   },
+  {
+    :name => "1121",
+    :presentation => "1121",
+    :position => 43,
+    :option_type => model
+  },
+  {
+    :name => "1122",
+    :presentation => "1122",
+    :position => 44,
+    :option_type => model
+  },
+  {
+    :name => "1123",
+    :presentation => "1123",
+    :position => 45,
+    :option_type => model
+  },
+  {
+    :name => "1124",
+    :presentation => "1124",
+    :position => 46,
+    :option_type => model
+  },
+  {
+    :name => "1125",
+    :presentation => "1125",
+    :position => 47,
+    :option_type => model
+  },
+  {
+    :name => "1126",
+    :presentation => "1126",
+    :position => 48,
+    :option_type => model
+  },
+  {
+    :name => "1127",
+    :presentation => "1127",
+    :position => 49,
+    :option_type => model
+  },
+  {
+    :name => "1128",
+    :presentation => "1128",
+    :position => 50,
+    :option_type => model
+  },
+  {
+    :name => "1132",
+    :presentation => "1132",
+    :position => 51,
+    :option_type => model
+  },
+  {
+    :name => "1133",
+    :presentation => "1133",
+    :position => 52,
+    :option_type => model
+  },
   # END Models
   
   # BEGIN Materials

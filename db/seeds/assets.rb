@@ -5,6 +5,7 @@ products[:galant] = Spree::Product.find_by_name!("Galant")
 products[:prio] = Spree::Product.find_by_name!("Prio")
 products[:new_classic] = Spree::Product.find_by_name!("New Classic")
 products[:decanto] = Spree::Product.find_by_name!("Decanto")
+products[:interio] = Spree::Product.find_by_name!("Interio")
 products[:legend] = Spree::Product.find_by_name!("Legend")
 products[:modum] = Spree::Product.find_by_name!("Modum")
 products[:tekton] = Spree::Product.find_by_name!("Tekton")
@@ -105,6 +106,20 @@ products[:decanto].variants.each do |variant|
   p "#{model}" + "#{glass if glass}" + "_#{color}" 
 
   main_image = image("#{model}" + "#{glass if glass}" + "_#{color}", "png")
+  variant.images.create!(:attachment => main_image)
+end
+
+products[:interio].variants.each do |variant|
+  model = variant.option_value("model")
+
+  color = variant.option_value("color")
+  color = "red_derevo_mokko" if color == I18n.t('option_values.mahogany_mocha')
+  color = "anegri_shokolad" if color == I18n.t('option_values.anegry_chocolate')
+  color = "yasen_vanilla" if color == I18n.t('option_values.ash_vanilla')
+  
+  p "#{model}_#{color}"
+
+  main_image = image("#{model}_#{color}", "png")
   variant.images.create!(:attachment => main_image)
 end
 
