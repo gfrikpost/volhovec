@@ -7,6 +7,7 @@ products[:new_classic] = Spree::Product.find_by_name!("New Classic")
 products[:decanto] = Spree::Product.find_by_name!("Decanto")
 products[:interio] = Spree::Product.find_by_name!("Interio")
 products[:legend] = Spree::Product.find_by_name!("Legend")
+products[:avant] = Spree::Product.find_by_name!("Avant")
 products[:modum] = Spree::Product.find_by_name!("Modum")
 products[:tekton] = Spree::Product.find_by_name!("Tekton")
 products[:nuance] = Spree::Product.find_by_name!("Nuance")
@@ -134,6 +135,34 @@ products[:legend].variants.each do |variant|
   p "#{model}_#{color}"
 
   main_image = image("#{model}_#{color}", "png")
+  variant.images.create!(:attachment => main_image)
+end
+
+products[:avant].variants.each do |variant|
+  model = variant.option_value("model")
+
+  color = variant.option_value("color")
+  color = "tb" if color == I18n.t('option_values.taeda_white')
+  color = "tch" if color == I18n.t('option_values.taeda_black')
+  color = "tp" if color == I18n.t('option_values.taeda_ashes')
+  color = "tt" if color == I18n.t('option_values.taeda_tobacco')
+  color = "tv" if color == I18n.t('option_values.taeda_vanilla')
+
+  glass = variant.option_value("glass")
+  glass = "_lawh" if glass == I18n.t('option_values.lakobel_white')
+  glass = "_labl" if glass == I18n.t('option_values.lakobel_black')
+  glass = "_matr" if glass == I18n.t('option_values.matt_triplex')
+  
+  making_portal = variant.option_value("making portal")
+  making_portal = "twh" if making_portal == I18n.t('option_values.trims_white_silk')
+  making_portal = "tbl" if making_portal == I18n.t('option_values.trims_black')
+  making_portal = "tas" if making_portal == I18n.t('option_values.trims_ash')
+  making_portal = "tch" if making_portal == I18n.t('option_values.trims_chocolate')
+  making_portal = "tiv" if making_portal == I18n.t('option_values.trims_ivory')
+
+  p "#{model}" + "_#{color}" + "#{glass if glass}" + "_#{making_portal}"
+
+  main_image = image("#{model}" + "_#{color}" + "#{glass if glass}" + "_#{making_portal}", "png")
   variant.images.create!(:attachment => main_image)
 end
 

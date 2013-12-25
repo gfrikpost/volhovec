@@ -30,6 +30,10 @@ legend = Spree::Product.find_by_name!("Legend")
 legend.option_types = [model, material, color]
 legend.save!
 
+avant = Spree::Product.find_by_name!("Avant")
+avant.option_types = [model, material, color, making_portal]
+avant.save!
+
 modum = Spree::Product.find_by_name!("Modum")
 modum.option_types = [model, material, color]
 modum.save!

@@ -342,6 +342,43 @@ Spree::OptionValue.create!([
     :position => 52,
     :option_type => model
   },
+  {
+    :name => "4030",
+    :presentation => "4030",
+    :position => 53,
+    :option_type => model
+  },
+  {
+    :name => "4031",
+    :presentation => "4031",
+    :position => 54,
+    :option_type => model
+  },
+  {
+    :name => "4033",
+    :presentation => "4033",
+    :position => 55,
+    :option_type => model
+  },
+  {
+    :name => "4034",
+    :presentation => "4034",
+    :position => 56,
+    :option_type => model
+  },
+  {
+    :name => "4035",
+    :presentation => "4035",
+    :position => 57,
+    :option_type => model
+  },
+  {
+    :name => "4037",
+    :presentation => "4037",
+    :position => 58,
+    :option_type => model
+  },
+  
   # END Models
   
   # BEGIN Materials
@@ -398,6 +435,12 @@ Spree::OptionValue.create!([
     :name => "cherry veneer",
     :presentation => I18n.t('product_properties.cherry_veneer'),
     :position => 9,
+    :option_type => material,
+  },
+  {
+    :name => "taeda veneer",
+    :presentation => I18n.t('product_properties.taeda_veneer'),
+    :position => 10,
     :option_type => material,
   },
   
@@ -549,6 +592,36 @@ Spree::OptionValue.create!([
     :position =>24,
     :option_type => color,
   },
+  {
+    :name => "Taeda tobacco",
+    :presentation => I18n.t('option_values.taeda_tobacco'),
+    :position =>25,
+    :option_type => color,
+  },
+  {
+    :name => "Taeda ashes",
+    :presentation => I18n.t('option_values.taeda_ashes'),
+    :position =>26,
+    :option_type => color,
+  },
+  {
+    :name => "Taeda vanilla",
+    :presentation => I18n.t('option_values.taeda_vanilla'),
+    :position =>27,
+    :option_type => color,
+  },
+  {
+    :name => "Taeda black",
+    :presentation => I18n.t('option_values.taeda_black'),
+    :position =>28,
+    :option_type => color,
+  },
+  {
+    :name => "Taeda white",
+    :presentation => I18n.t('option_values.taeda_white'),
+    :position =>29,
+    :option_type => color,
+  },
 # END Colors
 
 # Begin Glass
@@ -606,14 +679,62 @@ Spree::OptionValue.create!([
     :position => 9,
     :option_type => glass
   },
+  {
+    :name => "Lakobel-black",
+    :presentation => I18n.t('option_values.lakobel_black'),
+    :position => 10,
+    :option_type => glass
+  },
+  {
+    :name => "Lakobel-white",
+    :presentation => I18n.t('option_values.lakobel_white'),
+    :position => 11,
+    :option_type => glass
+  },
+  {
+    :name => "Matt-triplex",
+    :presentation => I18n.t('option_values.matt_triplex'),
+    :position => 12,
+    :option_type => glass
+  },
 # END Glass
+
+# BEGIN Making portal
   {
     :name => "Trims",
     :presentation => I18n.t('option_values.trims'),
     :position => 1,
     :option_type => making_portal
   },
-# BEGIN Making portal
-
+  {
+    :name => "Trims white silk",
+    :presentation => I18n.t('option_values.trims_white_silk'),
+    :position => 2,
+    :option_type => making_portal
+  },
+  {
+    :name => "Trims chocolate",
+    :presentation => I18n.t('option_values.trims_chocolate'),
+    :position => 3,
+    :option_type => making_portal
+  },
+  {
+    :name => "Trims ash",
+    :presentation => I18n.t('option_values.trims_ash'),
+    :position => 4,
+    :option_type => making_portal
+  },
+  {
+    :name => "Trims ivory",
+    :presentation => I18n.t('option_values.trims_ivory'),
+    :position => 5,
+    :option_type => making_portal
+  },
+  {
+    :name => "Trims black",
+    :presentation => I18n.t('option_values.trims_black'),
+    :position => 6,
+    :option_type => making_portal
+  },
 # END Making portal
 ])

@@ -46,6 +46,11 @@ products = [
     :price => 29995
   },
   {
+    :name => "Avant",
+    :shipping_category => shipping_category,
+    :price => 17695
+  },
+  {
     :name => "Modum",
     :shipping_category => shipping_category,
     :price => 12495

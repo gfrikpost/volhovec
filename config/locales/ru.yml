@@ -33,6 +33,11 @@ ru:
     mahogany_bordo: Красное дерево бордо
     oak_nutmeg: Дуб мускат
     anegry_nutmeg: Анегри мускат
+    taeda_tobacco: Таеда Табак
+    taeda_ashes: Таеда Пепел
+    taeda_vanilla: Таеда Ваниль
+    taeda_black: Таеда Чёрный
+    taeda_white: Таеда Белый
     satin_autor_paint: Сатинированное стекло с авторским рисунком «прованс»
     satin_autor_paint_vin: Сатинированное стекло с авторским рисунком «виньетка»
     satin_autor_paint_dam: Сатинированное стекло с авторским рисунком «дамаск»
@@ -42,7 +47,15 @@ ru:
     tempered_satin_bevel: Закалённое сатинированное стекло с фацетом
     meandr: Меандр
     shato: Шато
+    lakobel_black: Лакобель Черное
+    lakobel_white: Лакобель Белое
+    matt_triplex: Матовый триплекс
     trims: Наличники
+    trims_white_silk: Наличники Белый Шелк
+    trims_chocolate: Наличники Шоколадный
+    trims_ash: Наличники Пепельный
+    trims_ivory: Наличники Слоновая кость
+    trims_black: Наличники Черный
   product_properties:
     material: Материал
     solid_beech: массив бука
@@ -53,6 +66,7 @@ ru:
     ash_veneer: шпон ясеня
     mahogany_veneer: шпон красного дерева
     cherry_veneer: шпон вишни
+    taeda_veneer: шпон Таеда
   variants:
     white_silk: БШ
     ivory: СК
@@ -79,3 +93,10 @@ ru:
     mahogany_bordo: КДБ
     oak_nutmeg: ДБМ
     anegry_nutmeg: АНМ
+    
+    taeda_tobacco: ТТ
+    taeda_ashes: ТП
+    taeda_vanilla: ТВ
+    taeda_black: ТЧ
+    taeda_white: ТБ
+    taeda_white_l: ТБЛ

@@ -5,6 +5,7 @@ new_classic = Spree::Product.find_by_name!("New Classic")
 decanto = Spree::Product.find_by_name!("Decanto")
 interio = Spree::Product.find_by_name!("Interio")
 legend = Spree::Product.find_by_name!("Legend")
+avant = Spree::Product.find_by_name!("Avant")
 modum = Spree::Product.find_by_name!("Modum")
 tekton = Spree::Product.find_by_name!("Tekton")
 nuance = Spree::Product.find_by_name!("Nuance")
@@ -55,6 +56,13 @@ m2061 = Spree::OptionValue.find_by_name!("2061")
 m2062 = Spree::OptionValue.find_by_name!("2062")
 m2064 = Spree::OptionValue.find_by_name!("2064")
 
+m4030 = Spree::OptionValue.find_by_name!("4030")
+m4031 = Spree::OptionValue.find_by_name!("4031")
+m4033 = Spree::OptionValue.find_by_name!("4033")
+m4034 = Spree::OptionValue.find_by_name!("4034")
+m4035 = Spree::OptionValue.find_by_name!("4035")
+m4037 = Spree::OptionValue.find_by_name!("4037")
+
 m3020 = Spree::OptionValue.find_by_name!("3020")
 m3023 = Spree::OptionValue.find_by_name!("3023")
 m3024 = Spree::OptionValue.find_by_name!("3024")
@@ -86,7 +94,7 @@ anegri_veneer = Spree::OptionValue.find_by_name!("anegri veneer")
 ash_veneer = Spree::OptionValue.find_by_name!("ash veneer")
 mahogany_veneer = Spree::OptionValue.find_by_name!("mahogany veneer")
 cherry_veneer = Spree::OptionValue.find_by_name!("cherry veneer")
-
+taeda_veneer = Spree::OptionValue.find_by_name!("taeda veneer")
 # END Materials
 
 # BEGIN Colors
@@ -114,6 +122,12 @@ anegry_chocolate = Spree::OptionValue.find_by_name!("Anegry chocolate")
 
 cherry = Spree::OptionValue.find_by_name!("Cherry")
 
+taeda_tobacco = Spree::OptionValue.find_by_name!("Taeda tobacco")
+taeda_ashes = Spree::OptionValue.find_by_name!("Taeda ashes")
+taeda_vanilla = Spree::OptionValue.find_by_name!("Taeda vanilla")
+taeda_black = Spree::OptionValue.find_by_name!("Taeda black")
+taeda_white = Spree::OptionValue.find_by_name!("Taeda white")
+
 walnut_brandy = Spree::OptionValue.find_by_name!("Walnut brandy")
 cherry_brandy = Spree::OptionValue.find_by_name!("Cherry brandy")
 oak_cognac = Spree::OptionValue.find_by_name!("Oak cognac")
@@ -132,10 +146,18 @@ tempered_satin_paint_rose = Spree::OptionValue.find_by_name!("Tempered-satin-pai
 tempered_satin_bevel = Spree::OptionValue.find_by_name!("Tempered-satin-bevel")
 meandr = Spree::OptionValue.find_by_name!("Meandr")
 shato = Spree::OptionValue.find_by_name!("Shato")
+lakobel_black = Spree::OptionValue.find_by_name!("Lakobel-black")
+lakobel_white = Spree::OptionValue.find_by_name!("Lakobel-white")
+matt_triplex = Spree::OptionValue.find_by_name!("Matt-triplex")
 # END Glass
 
 # BEGIN Making portal
 trims = Spree::OptionValue.find_by_name!("Trims")
+trims_white_silk = Spree::OptionValue.find_by_name!("Trims white silk")
+trims_chocolate = Spree::OptionValue.find_by_name!("Trims chocolate")
+trims_ash = Spree::OptionValue.find_by_name!("Trims ash")
+trims_ivory = Spree::OptionValue.find_by_name!("Trims ivory")
+trims_black = Spree::OptionValue.find_by_name!("Trims black")
 # END Making portal
 
 variants = [
@@ -1084,6 +1106,192 @@ variants = [
     :cost_price => 29995
   },
 
+
+  {
+    :product => avant,
+    :option_values => [m4030, taeda_veneer, taeda_tobacco, trims_chocolate],
+    :sku => "4030 #{I18n.t('variants.taeda_tobacco')}",
+    :cost_price => 17695
+  },
+  {
+    :product => avant,
+    :option_values => [m4030, taeda_veneer, taeda_ashes, trims_ash],
+    :sku => "4030 #{I18n.t('variants.taeda_ashes')}",
+    :cost_price => 17695
+  },
+  {
+    :product => avant,
+    :option_values => [m4030, taeda_veneer, taeda_vanilla, trims_ivory],
+    :sku => "4030 #{I18n.t('variants.taeda_vanilla')}",
+    :cost_price => 17695
+  },
+  {
+    :product => avant,
+    :option_values => [m4030, taeda_veneer, taeda_black, trims_black],
+    :sku => "4030 #{I18n.t('variants.taeda_black')}",
+    :cost_price => 17695
+  },
+  {
+    :product => avant,
+    :option_values => [m4030, taeda_veneer, taeda_white, trims_white_silk],
+    :sku => "4030 #{I18n.t('variants.taeda_white_l')}",
+    :cost_price => 17695
+  },
+  
+  {
+    :product => avant,
+    :option_values => [m4031, taeda_veneer, taeda_tobacco, lakobel_black, trims_chocolate],
+    :sku => "4031 #{I18n.t('variants.taeda_tobacco')}",
+    :cost_price => 20695
+  },
+  {
+    :product => avant,
+    :option_values => [m4031, taeda_veneer, taeda_ashes, lakobel_black, trims_ash],
+    :sku => "4031 #{I18n.t('variants.taeda_ashes')}",
+    :cost_price => 20695
+  },
+  {
+    :product => avant,
+    :option_values => [m4031, taeda_veneer, taeda_vanilla, lakobel_white, trims_ivory],
+    :sku => "4031 #{I18n.t('variants.taeda_vanilla')}",
+    :cost_price => 20695
+  },
+  {
+    :product => avant,
+    :option_values => [m4031, taeda_veneer, taeda_black, lakobel_black, trims_black],
+    :sku => "4031 #{I18n.t('variants.taeda_black')}",
+    :cost_price => 20695
+  },
+  {
+    :product => avant,
+    :option_values => [m4031, taeda_veneer, taeda_white, lakobel_white, trims_white_silk],
+    :sku => "4031 #{I18n.t('variants.taeda_white')}",
+    :cost_price => 20695
+  },
+  
+  {
+    :product => avant,
+    :option_values => [m4033, taeda_veneer, taeda_tobacco, lakobel_black, trims_chocolate],
+    :sku => "4033 #{I18n.t('variants.taeda_tobacco')}",
+    :cost_price => 25695
+  },
+  {
+    :product => avant,
+    :option_values => [m4033, taeda_veneer, taeda_ashes, lakobel_black, trims_ash],
+    :sku => "4033 #{I18n.t('variants.taeda_ashes')}",
+    :cost_price => 25695
+  },
+  {
+    :product => avant,
+    :option_values => [m4033, taeda_veneer, taeda_vanilla, lakobel_white, trims_ivory],
+    :sku => "4033 #{I18n.t('variants.taeda_vanilla')}",
+    :cost_price => 25695
+  },
+  {
+    :product => avant,
+    :option_values => [m4033, taeda_veneer, taeda_black, lakobel_black, trims_black],
+    :sku => "4033 #{I18n.t('variants.taeda_black')}",
+    :cost_price => 25695
+  },
+  {
+    :product => avant,
+    :option_values => [m4033, taeda_veneer, taeda_white, lakobel_white, trims_white_silk],
+    :sku => "4033 #{I18n.t('variants.taeda_white_l')}",
+    :cost_price => 25695
+  },
+  
+  {
+    :product => avant,
+    :option_values => [m4034, taeda_veneer, taeda_tobacco, matt_triplex, trims_chocolate],
+    :sku => "4034 #{I18n.t('variants.taeda_tobacco')}",
+    :cost_price => 23695
+  },
+  {
+    :product => avant,
+    :option_values => [m4034, taeda_veneer, taeda_ashes, matt_triplex, trims_ash],
+    :sku => "4034 #{I18n.t('variants.taeda_ashes')}",
+    :cost_price => 23695
+  },
+  {
+    :product => avant,
+    :option_values => [m4034, taeda_veneer, taeda_vanilla, matt_triplex, trims_ivory],
+    :sku => "4034 #{I18n.t('variants.taeda_vanilla')}",
+    :cost_price => 23695
+  },
+  {
+    :product => avant,
+    :option_values => [m4034, taeda_veneer, taeda_black, lakobel_black, trims_black],
+    :sku => "4034 #{I18n.t('variants.taeda_black')}",
+    :cost_price => 23695
+  },
+  {
+    :product => avant,
+    :option_values => [m4034, taeda_veneer, taeda_white, matt_triplex, trims_white_silk],
+    :sku => "4034 #{I18n.t('variants.taeda_white')}",
+    :cost_price => 23695
+  },
+
+  {
+    :product => avant,
+    :option_values => [m4035, taeda_veneer, taeda_tobacco, lakobel_black, trims_chocolate],
+    :sku => "4035 #{I18n.t('variants.taeda_tobacco')}",
+    :cost_price => 22195
+  },
+  {
+    :product => avant,
+    :option_values => [m4035, taeda_veneer, taeda_ashes, lakobel_black, trims_ash],
+    :sku => "4035 #{I18n.t('variants.taeda_ashes')}",
+    :cost_price => 22195
+  },
+  {
+    :product => avant,
+    :option_values => [m4035, taeda_veneer, taeda_vanilla, lakobel_white, trims_ivory],
+    :sku => "4035 #{I18n.t('variants.taeda_vanilla')}",
+    :cost_price => 22195
+  },
+  {
+    :product => avant,
+    :option_values => [m4035, taeda_veneer, taeda_black, lakobel_black, trims_black],
+    :sku => "4035 #{I18n.t('variants.taeda_black')}",
+    :cost_price => 22195
+  },
+  {
+    :product => avant,
+    :option_values => [m4035, taeda_veneer, taeda_white, lakobel_white, trims_white_silk],
+    :sku => "4033 #{I18n.t('variants.taeda_white')}",
+    :cost_price => 22195
+  },
+  
+  {
+    :product => avant,
+    :option_values => [m4037, taeda_veneer, taeda_tobacco, lakobel_black, trims_chocolate],
+    :sku => "4037 #{I18n.t('variants.taeda_tobacco')}",
+    :cost_price => 20695
+  },
+  {
+    :product => avant,
+    :option_values => [m4037, taeda_veneer, taeda_ashes, lakobel_black, trims_ash],
+    :sku => "4037 #{I18n.t('variants.taeda_ashes')}",
+    :cost_price => 22195
+  },
+  {
+    :product => avant,
+    :option_values => [m4037, taeda_veneer, taeda_vanilla, lakobel_white, trims_ivory],
+    :sku => "4037 #{I18n.t('variants.taeda_vanilla')}",
+    :cost_price => 22195
+  },
+  {
+    :product => avant,
+    :option_values => [m4037, taeda_veneer, taeda_black, lakobel_black, trims_black],
+    :sku => "4037 #{I18n.t('variants.taeda_black')}",
+    :cost_price => 22195
+  },
+  {
+    :product => avant,
+    :option_values => [m4037, taeda_veneer, taeda_white, lakobel_white, trims_white_silk],
+    :sku => "4037 #{I18n.t('variants.taeda_white_l')}",
+    :cost_price => 22195
+  },
 
   {
     :product => modum,
