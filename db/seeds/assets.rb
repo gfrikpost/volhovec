@@ -11,6 +11,7 @@ products[:avant] = Spree::Product.find_by_name!("Avant")
 products[:modum] = Spree::Product.find_by_name!("Modum")
 products[:tekton] = Spree::Product.find_by_name!("Tekton")
 products[:nuance] = Spree::Product.find_by_name!("Nuance")
+products[:vario] = Spree::Product.find_by_name!("Vario")
 
 def image(name, type="jpeg")
   images_path = Pathname.new(File.dirname(__FILE__)) + "images"
@@ -206,6 +207,27 @@ products[:nuance].variants.each do |variant|
   p "#{model}_#{color}"
 
   main_image = image("#{model}_#{color}", "png")
+  variant.images.create!(:attachment => main_image)
+end
+
+products[:vario].variants.each do |variant|
+  model = variant.option_value("model")
+
+  color = variant.option_value("color")
+  color = "bbl" if color == I18n.t('option_values.beech_pure')
+  color = "bf" if color == I18n.t('option_values.beech_pistachio')
+  color = "bor" if color == I18n.t('option_values.beech_nut')
+  color = "bv" if color == I18n.t('option_values.beech_wenge')
+
+  glass = variant.option_value("glass")
+  glass = "_sat" if glass == I18n.t('option_values.satin')
+  
+  making_portal = variant.option_value("making portal")
+  making_portal = "tr" if making_portal == I18n.t('option_values.trims')
+
+  p "#{model}" + "_#{color}" + "#{glass if glass}" + "_#{making_portal}"
+
+  main_image = image("#{model}" + "_#{color}" + "#{glass if glass}" + "_#{making_portal}", "png")
   variant.images.create!(:attachment => main_image)
 end
 

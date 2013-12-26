@@ -45,3 +45,7 @@ tekton.save!
 nuance = Spree::Product.find_by_name!("Nuance")
 nuance.option_types = [model, material, color]
 nuance.save!
+
+vario = Spree::Product.find_by_name!("Vario")
+vario.option_types = [model, material, color, glass, making_portal]
+vario.save!

@@ -378,6 +378,48 @@ Spree::OptionValue.create!([
     :position => 58,
     :option_type => model
   },
+  {
+    :name => "0210",
+    :presentation => "0210",
+    :position => 59,
+    :option_type => model
+  },
+  {
+    :name => "0220",
+    :presentation => "0220",
+    :position => 60,
+    :option_type => model
+  },
+  {
+    :name => "0310",
+    :presentation => "0310",
+    :position => 61,
+    :option_type => model
+  },
+  {
+    :name => "0410",
+    :presentation => "0410",
+    :position => 62,
+    :option_type => model
+  },
+  {
+    :name => "0411",
+    :presentation => "0411",
+    :position => 63,
+    :option_type => model
+  },
+  {
+    :name => "0511",
+    :presentation => "0511",
+    :position => 64,
+    :option_type => model
+  },
+  {
+    :name => "0520",
+    :presentation => "0520",
+    :position => 65,
+    :option_type => model
+  },
   
   # END Models
   
@@ -620,6 +662,18 @@ Spree::OptionValue.create!([
     :name => "Taeda white",
     :presentation => I18n.t('option_values.taeda_white'),
     :position =>29,
+    :option_type => color,
+  },
+  {
+    :name => "Beech pure",
+    :presentation => I18n.t('option_values.beech_pure'),
+    :position =>30,
+    :option_type => color,
+  },
+  {
+    :name => "Beech pistachio",
+    :presentation => I18n.t('option_values.beech_pistachio'),
+    :position =>31,
     :option_type => color,
   },
 # END Colors

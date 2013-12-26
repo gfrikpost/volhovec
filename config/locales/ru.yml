@@ -16,6 +16,8 @@ ru:
     beech_nut: Бук орех
     beech_ivory: Бук слоновая кость
     beech_wenge: Бук венге
+    beech_pure: Бук белоснежный
+    beech_pistachio: Бук фисташковый
     white_oak: Дуб беленый
     bog_oak: Дуб мореный
     wenge: Венге
@@ -75,6 +77,8 @@ ru:
     beech_nut: БОР
     beech_ivory: БСК
     beech_wenge: БВ
+    beech_pure: ББЛ
+    beech_pistachio: БФ
     white_oak: ДБЕ
     bog_oak: ДМ
     wenge: В

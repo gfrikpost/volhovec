@@ -9,6 +9,8 @@ avant = Spree::Product.find_by_name!("Avant")
 modum = Spree::Product.find_by_name!("Modum")
 tekton = Spree::Product.find_by_name!("Tekton")
 nuance = Spree::Product.find_by_name!("Nuance")
+vario = Spree::Product.find_by_name!("Vario")
+
 # END Products
 
 # BEGIN Models
@@ -82,6 +84,14 @@ m1128 = Spree::OptionValue.find_by_name!("1128")
 m1132 = Spree::OptionValue.find_by_name!("1132")
 m1133 = Spree::OptionValue.find_by_name!("1133")
 
+m0210 = Spree::OptionValue.find_by_name!("0210")
+m0220 = Spree::OptionValue.find_by_name!("0220")
+m0310 = Spree::OptionValue.find_by_name!("0310")
+m0410 = Spree::OptionValue.find_by_name!("0410")
+m0411 = Spree::OptionValue.find_by_name!("0411")
+m0511 = Spree::OptionValue.find_by_name!("0511")
+m0520 = Spree::OptionValue.find_by_name!("0520")
+
 # END Models
 
 # BEGIN Materials
@@ -106,6 +116,8 @@ patina_antique = Spree::OptionValue.find_by_name!("Patina Antique")
 beech_nut = Spree::OptionValue.find_by_name!("Beech nut")
 beech_ivory = Spree::OptionValue.find_by_name!("Beech ivory")
 beech_wenge = Spree::OptionValue.find_by_name!("Beech wenge")
+beech_pure = Spree::OptionValue.find_by_name!("Beech pure")
+beech_pistachio = Spree::OptionValue.find_by_name!("Beech pistachio")
 
 white_oak = Spree::OptionValue.find_by_name!("White oak")
 bog_oak = Spree::OptionValue.find_by_name!("Bog oak")
@@ -1604,6 +1616,175 @@ variants = [
     :cost_price => 14995
   },
   
+  
+  {
+    :product => vario,
+    :option_values => [m0210, solid_beech, beech_nut, trims],
+    :sku => "0210#{I18n.t('variants.beech_nut')}",
+    :cost_price => 22745
+  },
+  {
+    :product => vario,
+    :option_values => [m0210, solid_beech, beech_wenge, trims],
+    :sku => "0210#{I18n.t('variants.beech_wenge')}",
+    :cost_price => 22745
+  },
+  {
+    :product => vario,
+    :option_values => [m0210, solid_beech, beech_pure, trims],
+    :sku => "0210#{I18n.t('variants.beech_pure')}",
+    :cost_price => 22745
+  },
+  {
+    :product => vario,
+    :option_values => [m0210, solid_beech, beech_pistachio, trims],
+    :sku => "0210#{I18n.t('variants.beech_pistachio')}",
+    :cost_price => 22745
+  },
+  
+  {
+    :product => vario,
+    :option_values => [m0220, solid_beech, beech_nut, satin, trims],
+    :sku => "0220#{I18n.t('variants.beech_nut')}",
+    :cost_price => 22745
+  },
+  {
+    :product => vario,
+    :option_values => [m0220, solid_beech, beech_wenge, satin, trims],
+    :sku => "0220#{I18n.t('variants.beech_wenge')}",
+    :cost_price => 22745
+  },
+  {
+    :product => vario,
+    :option_values => [m0220, solid_beech, beech_pure, satin, trims],
+    :sku => "0220#{I18n.t('variants.beech_pure')}",
+    :cost_price => 22745
+  },
+  {
+    :product => vario,
+    :option_values => [m0220, solid_beech, beech_pistachio, satin, trims],
+    :sku => "0220#{I18n.t('variants.beech_pistachio')}",
+    :cost_price => 22745
+  },
+  
+  {
+    :product => vario,
+    :option_values => [m0310, solid_beech, beech_nut, satin, trims],
+    :sku => "0310#{I18n.t('variants.beech_nut')}",
+    :cost_price => 21745
+  },
+  {
+    :product => vario,
+    :option_values => [m0310, solid_beech, beech_wenge, satin, trims],
+    :sku => "0310#{I18n.t('variants.beech_wenge')}",
+    :cost_price => 21745
+  },
+  {
+    :product => vario,
+    :option_values => [m0310, solid_beech, beech_pure, satin, trims],
+    :sku => "0310#{I18n.t('variants.beech_pure')}",
+    :cost_price => 21745
+  },
+  {
+    :product => vario,
+    :option_values => [m0310, solid_beech, beech_pistachio, satin, trims],
+    :sku => "0310#{I18n.t('variants.beech_pistachio')}",
+    :cost_price => 21745
+  },
+  
+  {
+    :product => vario,
+    :option_values => [m0511, solid_beech, beech_nut, trims],
+    :sku => "0511#{I18n.t('variants.beech_nut')}",
+    :cost_price => 22245
+  },
+  {
+    :product => vario,
+    :option_values => [m0511, solid_beech, beech_wenge, trims],
+    :sku => "0511#{I18n.t('variants.beech_wenge')}",
+    :cost_price => 22245
+  },
+  {
+    :product => vario,
+    :option_values => [m0511, solid_beech, beech_pure, trims],
+    :sku => "0511#{I18n.t('variants.beech_pure')}",
+    :cost_price => 22245
+  },
+  {
+    :product => vario,
+    :option_values => [m0511, solid_beech, beech_pistachio, trims],
+    :sku => "0511#{I18n.t('variants.beech_pistachio')}",
+    :cost_price => 22245
+  },
+  
+  {
+    :product => vario,
+    :option_values => [m0520, solid_beech, beech_nut, satin, trims],
+    :sku => "0520#{I18n.t('variants.beech_nut')}",
+    :cost_price => 22245
+  },
+  {
+    :product => vario,
+    :option_values => [m0520, solid_beech, beech_wenge, satin, trims],
+    :sku => "0520#{I18n.t('variants.beech_wenge')}",
+    :cost_price => 22245
+  },
+  {
+    :product => vario,
+    :option_values => [m0520, solid_beech, beech_pistachio, satin, trims],
+    :sku => "0520#{I18n.t('variants.beech_pistachio')}",
+    :cost_price => 22245
+  },
+  
+  {
+    :product => vario,
+    :option_values => [m0410, solid_beech, beech_nut, satin, trims],
+    :sku => "0410#{I18n.t('variants.beech_nut')}",
+    :cost_price => 21745
+  },
+  {
+    :product => vario,
+    :option_values => [m0410, solid_beech, beech_wenge, satin, trims],
+    :sku => "0410#{I18n.t('variants.beech_wenge')}",
+    :cost_price => 21745
+  },
+  {
+    :product => vario,
+    :option_values => [m0410, solid_beech, beech_pure, satin, trims],
+    :sku => "0410#{I18n.t('variants.beech_pure')}",
+    :cost_price => 21745
+  },
+  {
+    :product => vario,
+    :option_values => [m0410, solid_beech, beech_pistachio, satin, trims],
+    :sku => "0410#{I18n.t('variants.beech_pistachio')}",
+    :cost_price => 21745
+  },
+  
+  {
+    :product => vario,
+    :option_values => [m0411, solid_beech, beech_nut, trims],
+    :sku => "0411#{I18n.t('variants.beech_nut')}",
+    :cost_price => 21745
+  },
+  {
+    :product => vario,
+    :option_values => [m0411, solid_beech, beech_wenge, trims],
+    :sku => "0411#{I18n.t('variants.beech_wenge')}",
+    :cost_price => 21745
+  },
+  {
+    :product => vario,
+    :option_values => [m0411, solid_beech, beech_pure, trims],
+    :sku => "0411#{I18n.t('variants.beech_pure')}",
+    :cost_price => 21745
+  },
+  {
+    :product => vario,
+    :option_values => [m0411, solid_beech, beech_pistachio, trims],
+    :sku => "0411#{I18n.t('variants.beech_pistachio')}",
+    :cost_price => 21745
+  },
 ]
 
 #masters = {

@@ -64,6 +64,11 @@ products = [
     :name => "Nuance",
     :shipping_category => shipping_category,
     :price => 9995
+  },
+  {
+    :name => "Vario",
+    :shipping_category => shipping_category,
+    :price => 22745
   }
 ]
 
