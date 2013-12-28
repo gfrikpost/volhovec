@@ -6,6 +6,8 @@ ru:
     model: Модель
     color: Цвет
     glass: Стекло
+    material: Материал
+    making_portal: Оформление портала
   option_values:
     white_silk: Белый шелк
     ivory: Слоновая кость
@@ -14,6 +16,10 @@ ru:
     beech_nut: Бук орех
     beech_ivory: Бук слоновая кость
     beech_wenge: Бук венге
+    beech_pure: Бук белоснежный
+    beech_pure_silver: Бук белоснежный с серебром
+    beech_pistachio: Бук фисташковый
+    beech_pistachio_vanilla: Бук фисташковый с ванилью
     white_oak: Дуб беленый
     bog_oak: Дуб мореный
     wenge: Венге
@@ -24,19 +30,47 @@ ru:
     ash_vanilla: Ясень ваниль
     mahogany_mocha: Красное дерево мокко
     anegry_chocolate: Анегри шоколад
+    cherry: Вишня
+    walnut_brandy: Орех бренди
+    cherry_brandy: Вишня бренди
+    oak_cognac: Дуб коньяк
+    mahogany_bordo: Красное дерево бордо
+    oak_nutmeg: Дуб мускат
+    anegry_nutmeg: Анегри мускат
+    taeda_tobacco: Таеда Табак
+    taeda_ashes: Таеда Пепел
+    taeda_vanilla: Таеда Ваниль
+    taeda_black: Таеда Чёрный
+    taeda_white: Таеда Белый
     satin_autor_paint: Сатинированное стекло с авторским рисунком «прованс»
     satin_autor_paint_vin: Сатинированное стекло с авторским рисунком «виньетка»
     satin_autor_paint_dam: Сатинированное стекло с авторским рисунком «дамаск»
     satin_loft: Сатинированное стекло лофт
     satin: Сатиновое стекло
+    tempered_satin_paint_rose: Закалённое сатинированное стекло с рисунком «Роза»
+    tempered_satin_bevel: Закалённое сатинированное стекло с фацетом
+    meandr: Меандр
+    shato: Шато
+    lakobel_black: Лакобель Черное
+    lakobel_white: Лакобель Белое
+    matt_triplex: Матовый триплекс
+    trims: Наличники
+    trims_white_silk: Наличники Белый Шелк
+    trims_chocolate: Наличники Шоколадный
+    trims_ash: Наличники Пепельный
+    trims_ivory: Наличники Слоновая кость
+    trims_black: Наличники Черный
   product_properties:
     material: Материал
     solid_beech: массив бука
+    wenge_veneer: шпон венге
     oak_veneer: шпон дуба
     nut_veneer: шпон ореха
     anegri_veneer: шпон анегри
     ash_veneer: шпон ясеня
     mahogany_veneer: шпон красного дерева
+    cherry_veneer: шпон вишни
+    taeda_veneer: шпон Таеда
   variants:
     white_silk: БШ
     ivory: СК
@@ -45,6 +79,10 @@ ru:
     beech_nut: БОР
     beech_ivory: БСК
     beech_wenge: БВ
+    beech_pure: ББЛ
+    beech_pure_silver: ББЛС
+    beech_pistachio: БФ
+    beech_pistachio_vanilla: БФВ
     white_oak: ДБЕ
     bog_oak: ДМ
     wenge: В
@@ -55,3 +93,18 @@ ru:
     ash_vanilla: ЯСВ
     mahogany_mocha: КДМ
     anegry_chocolate: АНШ
+    cherry: ВШ
+    
+    walnut_brandy: ОРБ
+    cherry_brandy: ВШБ
+    oak_cognac: ДБК
+    mahogany_bordo: КДБ
+    oak_nutmeg: ДБМ
+    anegry_nutmeg: АНМ
+    
+    taeda_tobacco: ТТ
+    taeda_ashes: ТП
+    taeda_vanilla: ТВ
+    taeda_black: ТЧ
+    taeda_white: ТБ
+    taeda_white_l: ТБЛ

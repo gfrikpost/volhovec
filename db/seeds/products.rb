@@ -26,9 +26,34 @@ products = [
     :price => 9995
   },
   {
+    :name => "New Classic",
+    :shipping_category => shipping_category,
+    :price => 21995
+  },
+  {
+    :name => "Decanto",
+    :shipping_category => shipping_category,
+    :price => 17795
+  },
+  {
+    :name => "Interio",
+    :shipping_category => shipping_category,
+    :price => 11495
+  },
+  {
+    :name => "Perfecto",
+    :shipping_category => shipping_category,
+    :price => 27945
+  },
+  {
     :name => "Legend",
     :shipping_category => shipping_category,
     :price => 29995
+  },
+  {
+    :name => "Avant",
+    :shipping_category => shipping_category,
+    :price => 17695
   },
   {
     :name => "Modum",
@@ -44,6 +69,11 @@ products = [
     :name => "Nuance",
     :shipping_category => shipping_category,
     :price => 9995
+  },
+  {
+    :name => "Vario",
+    :shipping_category => shipping_category,
+    :price => 22745
   }
 ]
 
