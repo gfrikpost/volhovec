@@ -4,6 +4,7 @@ prio = Spree::Product.find_by_name!("Prio")
 new_classic = Spree::Product.find_by_name!("New Classic")
 decanto = Spree::Product.find_by_name!("Decanto")
 interio = Spree::Product.find_by_name!("Interio")
+perfecto = Spree::Product.find_by_name!("Perfecto")
 legend = Spree::Product.find_by_name!("Legend")
 avant = Spree::Product.find_by_name!("Avant")
 modum = Spree::Product.find_by_name!("Modum")
@@ -46,6 +47,12 @@ m4017 = Spree::OptionValue.find_by_name!("4017")
 m4021 = Spree::OptionValue.find_by_name!("4021")
 m4023 = Spree::OptionValue.find_by_name!("4023")
 m4024 = Spree::OptionValue.find_by_name!("4024")
+
+m0610 = Spree::OptionValue.find_by_name!("0610")
+m0611 = Spree::OptionValue.find_by_name!("0611")
+m0622 = Spree::OptionValue.find_by_name!("0622")
+m0620 = Spree::OptionValue.find_by_name!("0620")
+m0621 = Spree::OptionValue.find_by_name!("0621")
 
 m2021 = Spree::OptionValue.find_by_name!("2021")
 m2024 = Spree::OptionValue.find_by_name!("2024")
@@ -117,7 +124,9 @@ beech_nut = Spree::OptionValue.find_by_name!("Beech nut")
 beech_ivory = Spree::OptionValue.find_by_name!("Beech ivory")
 beech_wenge = Spree::OptionValue.find_by_name!("Beech wenge")
 beech_pure = Spree::OptionValue.find_by_name!("Beech pure")
+beech_pure_silver = Spree::OptionValue.find_by_name!("Beech pure silver")
 beech_pistachio = Spree::OptionValue.find_by_name!("Beech pistachio")
+beech_pistachio_vanilla = Spree::OptionValue.find_by_name!("Beech pistachio vanilla")
 
 white_oak = Spree::OptionValue.find_by_name!("White oak")
 bog_oak = Spree::OptionValue.find_by_name!("Bog oak")
@@ -435,12 +444,12 @@ variants = [
     :sku => "5021 #{I18n.t('variants.cherry_brandy')}",
     :cost_price => 17795
   },
-  {
-    :product => decanto,
-    :option_values => [m5021, oak_veneer, oak_cognac, trims],
-    :sku => "5021 #{I18n.t('variants.oak_cognac')}",
-    :cost_price => 17795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5021, oak_veneer, oak_cognac, trims],
+  #  :sku => "5021 #{I18n.t('variants.oak_cognac')}",
+  #  :cost_price => 17795
+  #},
   {
     :product => decanto,
     :option_values => [m5021, mahogany_veneer, mahogany_bordo, trims],
@@ -453,12 +462,12 @@ variants = [
     :sku => "5021 #{I18n.t('variants.oak_nutmeg')}",
     :cost_price => 16795
   },
-  {
-    :product => decanto,
-    :option_values => [m5021, anegri_veneer, anegry_nutmeg, trims],
-    :sku => "5021 #{I18n.t('variants.anegry_nutmeg')}",
-    :cost_price => 16795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5021, anegri_veneer, anegry_nutmeg, trims],
+  #  :sku => "5021 #{I18n.t('variants.anegry_nutmeg')}",
+  #  :cost_price => 16795
+  #},
   
   {
     :product => decanto,
@@ -466,73 +475,74 @@ variants = [
     :sku => "5022 #{I18n.t('variants.walnut_brandy')}",
     :cost_price => 19795
   },
-  {
-    :product => decanto,
-    :option_values => [m5022, nut_veneer, walnut_brandy, shato, trims],
-    :sku => "5022 #{I18n.t('variants.walnut_brandy')}",
-    :cost_price => 19795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5022, nut_veneer, walnut_brandy, shato, trims],
+  #  :sku => "5022 #{I18n.t('variants.walnut_brandy')}",
+  #  :cost_price => 19795
+  #},
   {
     :product => decanto,
     :option_values => [m5022, cherry_veneer, cherry_brandy, meandr, trims],
     :sku => "5022 #{I18n.t('variants.cherry_brandy')}",
     :cost_price => 19795
   },
-  {
-    :product => decanto,
-    :option_values => [m5022, cherry_veneer, cherry_brandy, shato, trims],
-    :sku => "5022 #{I18n.t('variants.cherry_brandy')}",
-    :cost_price => 19795
-  },
-  {
-    :product => decanto,
-    :option_values => [m5022, oak_veneer, oak_cognac, meandr, trims],
-    :sku => "5022 #{I18n.t('variants.oak_cognac')}",
-    :cost_price => 19795
-  },
-  {
-    :product => decanto,
-    :option_values => [m5022, oak_veneer, oak_cognac, shato, trims],
-    :sku => "5022 #{I18n.t('variants.oak_cognac')}",
-    :cost_price => 19795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5022, cherry_veneer, cherry_brandy, shato, trims],
+  #  :sku => "5022 #{I18n.t('variants.cherry_brandy')}",
+  #  :cost_price => 19795
+  #},
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5022, oak_veneer, oak_cognac, meandr, trims],
+  #  :sku => "5022 #{I18n.t('variants.oak_cognac')}",
+  #  :cost_price => 19795
+  #},
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5022, oak_veneer, oak_cognac, shato, trims],
+  #  :sku => "5022 #{I18n.t('variants.oak_cognac')}",
+  #  :cost_price => 19795
+  #},
   {
     :product => decanto,
     :option_values => [m5022, mahogany_veneer, mahogany_bordo, meandr, trims],
     :sku => "5022 #{I18n.t('variants.mahogany_bordo')}",
     :cost_price => 18795
   },
-  {
-    :product => decanto,
-    :option_values => [m5022, mahogany_veneer, mahogany_bordo, shato, trims],
-    :sku => "5022 #{I18n.t('variants.mahogany_bordo')}",
-    :cost_price => 18795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5022, mahogany_veneer, mahogany_bordo, shato, trims],
+  #  :sku => "5022 #{I18n.t('variants.mahogany_bordo')}",
+  #  :cost_price => 18795
+  #},
   {
     :product => decanto,
     :option_values => [m5022, oak_veneer, oak_nutmeg, meandr, trims],
     :sku => "5022 #{I18n.t('variants.oak_nutmeg')}",
     :cost_price => 18795
   },
-  {
-    :product => decanto,
-    :option_values => [m5022, oak_veneer, oak_nutmeg, shato, trims],
-    :sku => "5022 #{I18n.t('variants.oak_nutmeg')}",
-    :cost_price => 18795
-  },
-  {
-    :product => decanto,
-    :option_values => [m5022, anegri_veneer, anegry_nutmeg, meandr, trims],
-    :sku => "5022 #{I18n.t('variants.anegry_nutmeg')}",
-    :cost_price => 18795
-  },
-  {
-    :product => decanto,
-    :option_values => [m5022, anegri_veneer, anegry_nutmeg, shato, trims],
-    :sku => "5022 #{I18n.t('variants.anegry_nutmeg')}",
-    :cost_price => 18795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5022, oak_veneer, oak_nutmeg, shato, trims],
+  #  :sku => "5022 #{I18n.t('variants.oak_nutmeg')}",
+  #  :cost_price => 18795
+  #},
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5022, anegri_veneer, anegry_nutmeg, meandr, trims],
+  #  :sku => "5022 #{I18n.t('variants.anegry_nutmeg')}",
+  #  :cost_price => 18795
+  #},
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5022, anegri_veneer, anegry_nutmeg, shato, trims],
+  #  :sku => "5022 #{I18n.t('variants.anegry_nutmeg')}",
+  #  :cost_price => 18795
+  #},
   
+=begin
   {
     :product => decanto,
     :option_values => [m5071, nut_veneer, walnut_brandy, trims],
@@ -642,6 +652,7 @@ variants = [
     :sku => "5072 #{I18n.t('variants.anegry_nutmeg')}",
     :cost_price => 19795
   },
+=end
 
   {
     :product => decanto,
@@ -655,12 +666,12 @@ variants = [
     :sku => "5091 #{I18n.t('variants.cherry_brandy')}",
     :cost_price => 20795
   },
-  {
-    :product => decanto,
-    :option_values => [m5091, oak_veneer, oak_cognac, trims],
-    :sku => "5091 #{I18n.t('variants.oak_cognac')}",
-    :cost_price => 20795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5091, oak_veneer, oak_cognac, trims],
+  #  :sku => "5091 #{I18n.t('variants.oak_cognac')}",
+  #  :cost_price => 20795
+  #},
   {
     :product => decanto,
     :option_values => [m5091, mahogany_veneer, mahogany_bordo, trims],
@@ -673,12 +684,12 @@ variants = [
     :sku => "5091 #{I18n.t('variants.oak_nutmeg')}",
     :cost_price => 19795
   },
-  {
-    :product => decanto,
-    :option_values => [m5091, anegri_veneer, anegry_nutmeg, trims],
-    :sku => "5091 #{I18n.t('variants.anegry_nutmeg')}",
-    :cost_price => 19795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5091, anegri_veneer, anegry_nutmeg, trims],
+  #  :sku => "5091 #{I18n.t('variants.anegry_nutmeg')}",
+  #  :cost_price => 19795
+  #},
 
   {
     :product => decanto,
@@ -693,60 +704,60 @@ variants = [
     :sku => "5092 #{I18n.t('variants.cherry_brandy')}",
     :cost_price => 22795
   },
-  {
-    :product => decanto,
-    :option_values => [m5092, cherry_veneer, cherry_brandy, shato, trims],
-    :sku => "5092 #{I18n.t('variants.cherry_brandy')}",
-    :cost_price => 22795
-  },
-  {
-    :product => decanto,
-    :option_values => [m5092, oak_veneer, oak_cognac, meandr, trims],
-    :sku => "5092 #{I18n.t('variants.oak_cognac')}",
-    :cost_price => 21795
-  },
-  {
-    :product => decanto,
-    :option_values => [m5092, oak_veneer, oak_cognac, shato, trims],
-    :sku => "5092 #{I18n.t('variants.oak_cognac')}",
-    :cost_price => 22795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5092, cherry_veneer, cherry_brandy, shato, trims],
+  #  :sku => "5092 #{I18n.t('variants.cherry_brandy')}",
+  #  :cost_price => 22795
+  #},
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5092, oak_veneer, oak_cognac, meandr, trims],
+  #  :sku => "5092 #{I18n.t('variants.oak_cognac')}",
+  #  :cost_price => 21795
+  #},
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5092, oak_veneer, oak_cognac, shato, trims],
+  #  :sku => "5092 #{I18n.t('variants.oak_cognac')}",
+  #  :cost_price => 22795
+  #},
   {
     :product => decanto,
     :option_values => [m5092, mahogany_veneer, mahogany_bordo, meandr, trims],
     :sku => "5092 #{I18n.t('variants.mahogany_bordo')}",
     :cost_price => 21795
   },
-  {
-    :product => decanto,
-    :option_values => [m5092, mahogany_veneer, mahogany_bordo, shato, trims],
-    :sku => "5092 #{I18n.t('variants.mahogany_bordo')}",
-    :cost_price => 21795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5092, mahogany_veneer, mahogany_bordo, shato, trims],
+  #  :sku => "5092 #{I18n.t('variants.mahogany_bordo')}",
+  #  :cost_price => 21795
+  #},
   {
     :product => decanto,
     :option_values => [m5092, oak_veneer, oak_nutmeg, meandr, trims],
     :sku => "5092 #{I18n.t('variants.oak_nutmeg')}",
     :cost_price => 21795
   },
-  {
-    :product => decanto,
-    :option_values => [m5092, oak_veneer, oak_nutmeg, shato, trims],
-    :sku => "5092 #{I18n.t('variants.oak_nutmeg')}",
-    :cost_price => 21795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5092, oak_veneer, oak_nutmeg, shato, trims],
+  #  :sku => "5092 #{I18n.t('variants.oak_nutmeg')}",
+  #  :cost_price => 21795
+  #},
   {
     :product => decanto,
     :option_values => [m5092, anegri_veneer, anegry_nutmeg, meandr, trims],
     :sku => "5092 #{I18n.t('variants.anegry_nutmeg')}",
     :cost_price => 21795
   },
-  {
-    :product => decanto,
-    :option_values => [m5092, anegri_veneer, anegry_nutmeg, shato, trims],
-    :sku => "5092 #{I18n.t('variants.anegry_nutmeg')}",
-    :cost_price => 21795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5092, anegri_veneer, anegry_nutmeg, shato, trims],
+  #  :sku => "5092 #{I18n.t('variants.anegry_nutmeg')}",
+  #  :cost_price => 21795
+  #},
   
   {
     :product => decanto,
@@ -760,24 +771,24 @@ variants = [
     :sku => "5101 #{I18n.t('variants.cherry_brandy')}",
     :cost_price => 20795
   },
-  {
-    :product => decanto,
-    :option_values => [m5101, oak_veneer, oak_cognac, trims],
-    :sku => "5101 #{I18n.t('variants.oak_cognac')}",
-    :cost_price => 20795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5101, oak_veneer, oak_cognac, trims],
+  #  :sku => "5101 #{I18n.t('variants.oak_cognac')}",
+  #  :cost_price => 20795
+  #},
   {
     :product => decanto,
     :option_values => [m5101, mahogany_veneer, mahogany_bordo, trims],
     :sku => "5101 #{I18n.t('variants.mahogany_bordo')}",
     :cost_price => 19795
   },
-  {
-    :product => decanto,
-    :option_values => [m5101, oak_veneer, oak_nutmeg, trims],
-    :sku => "5101 #{I18n.t('variants.oak_nutmeg')}",
-    :cost_price => 19795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5101, oak_veneer, oak_nutmeg, trims],
+  #  :sku => "5101 #{I18n.t('variants.oak_nutmeg')}",
+  #  :cost_price => 19795
+  #},
   {
     :product => decanto,
     :option_values => [m5101, anegri_veneer, anegry_nutmeg, trims],
@@ -791,72 +802,72 @@ variants = [
     :sku => "5102 #{I18n.t('variants.walnut_brandy')}",
     :cost_price => 22795
   },
-  {
-    :product => decanto,
-    :option_values => [m5102, nut_veneer, walnut_brandy, shato, trims],
-    :sku => "5102 #{I18n.t('variants.walnut_brandy')}",
-    :cost_price => 22795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5102, nut_veneer, walnut_brandy, shato, trims],
+  #  :sku => "5102 #{I18n.t('variants.walnut_brandy')}",
+  #  :cost_price => 22795
+  #},
   {
     :product => decanto,
     :option_values => [m5102, cherry_veneer, cherry_brandy, meandr, trims],
     :sku => "5102 #{I18n.t('variants.cherry_brandy')}",
     :cost_price => 22795
   },
-  {
-    :product => decanto,
-    :option_values => [m5102, cherry_veneer, cherry_brandy, shato, trims],
-    :sku => "5102 #{I18n.t('variants.cherry_brandy')}",
-    :cost_price => 22795
-  },
-  {
-    :product => decanto,
-    :option_values => [m5102, oak_veneer, oak_cognac, meandr, trims],
-    :sku => "5102 #{I18n.t('variants.oak_cognac')}",
-    :cost_price => 22795
-  },
-  {
-    :product => decanto,
-    :option_values => [m5102, oak_veneer, oak_cognac, shato, trims],
-    :sku => "5102 #{I18n.t('variants.oak_cognac')}",
-    :cost_price => 22795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5102, cherry_veneer, cherry_brandy, shato, trims],
+  #  :sku => "5102 #{I18n.t('variants.cherry_brandy')}",
+  #  :cost_price => 22795
+  #},
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5102, oak_veneer, oak_cognac, meandr, trims],
+  #  :sku => "5102 #{I18n.t('variants.oak_cognac')}",
+  #  :cost_price => 22795
+  #},
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5102, oak_veneer, oak_cognac, shato, trims],
+  #  :sku => "5102 #{I18n.t('variants.oak_cognac')}",
+  #  :cost_price => 22795
+  #},
   {
     :product => decanto,
     :option_values => [m5102, mahogany_veneer, mahogany_bordo, meandr, trims],
     :sku => "5102 #{I18n.t('variants.mahogany_bordo')}",
     :cost_price => 21795
   },
-  {
-    :product => decanto,
-    :option_values => [m5102, mahogany_veneer, mahogany_bordo, shato, trims],
-    :sku => "5102 #{I18n.t('variants.mahogany_bordo')}",
-    :cost_price => 21795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5102, mahogany_veneer, mahogany_bordo, shato, trims],
+  #  :sku => "5102 #{I18n.t('variants.mahogany_bordo')}",
+  #  :cost_price => 21795
+  #},
   {
     :product => decanto,
     :option_values => [m5102, oak_veneer, oak_nutmeg, meandr, trims],
     :sku => "5102 #{I18n.t('variants.oak_nutmeg')}",
     :cost_price => 21795
   },
-  {
-    :product => decanto,
-    :option_values => [m5102, oak_veneer, oak_nutmeg, shato, trims],
-    :sku => "5102 #{I18n.t('variants.oak_nutmeg')}",
-    :cost_price => 21795
-  },
-  {
-    :product => decanto,
-    :option_values => [m5102, anegri_veneer, anegry_nutmeg, meandr, trims],
-    :sku => "5102 #{I18n.t('variants.anegry_nutmeg')}",
-    :cost_price => 21795
-  },
-  {
-    :product => decanto,
-    :option_values => [m5102, anegri_veneer, anegry_nutmeg, shato, trims],
-    :sku => "5102 #{I18n.t('variants.anegry_nutmeg')}",
-    :cost_price => 21795
-  },
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5102, oak_veneer, oak_nutmeg, shato, trims],
+  #  :sku => "5102 #{I18n.t('variants.oak_nutmeg')}",
+  #  :cost_price => 21795
+  #},
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5102, anegri_veneer, anegry_nutmeg, meandr, trims],
+  #  :sku => "5102 #{I18n.t('variants.anegry_nutmeg')}",
+  #  :cost_price => 21795
+  #},
+  #{
+  #  :product => decanto,
+  #  :option_values => [m5102, anegri_veneer, anegry_nutmeg, shato, trims],
+  #  :sku => "5102 #{I18n.t('variants.anegry_nutmeg')}",
+  #  :cost_price => 21795
+  #},
 
   {
     :product => interio,
@@ -1026,6 +1037,133 @@ variants = [
     :sku => "1133#{I18n.t('variants.ash_vanilla')}",
     :cost_price => 13495
   },
+  
+  
+  {
+    :product => perfecto,
+    :option_values => [m0610, solid_beech, beech_wenge, satin, trims],
+    :sku => "0610#{I18n.t('variants.beech_wenge')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0610, solid_beech, beech_nut, satin, trims],
+    :sku => "0610#{I18n.t('variants.beech_nut')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0610, solid_beech, beech_pure_silver, satin, trims],
+    :sku => "0610#{I18n.t('variants.beech_pure_silver')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0610, solid_beech, beech_pistachio_vanilla, satin, trims],
+    :sku => "0610#{I18n.t('variants.beech_pistachio_vanilla')}",
+    :cost_price => 27945
+  },
+  
+  {
+    :product => perfecto,
+    :option_values => [m0611, solid_beech, beech_wenge, trims],
+    :sku => "0611#{I18n.t('variants.beech_wenge')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0611, solid_beech, beech_nut, trims],
+    :sku => "0611#{I18n.t('variants.beech_nut')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0611, solid_beech, beech_pure_silver, trims],
+    :sku => "0611#{I18n.t('variants.beech_pure_silver')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0611, solid_beech, beech_pistachio_vanilla, trims],
+    :sku => "0611#{I18n.t('variants.beech_pistachio_vanilla')}",
+    :cost_price => 27945
+  },
+  
+  {
+    :product => perfecto,
+    :option_values => [m0622, solid_beech, beech_wenge, satin, trims],
+    :sku => "0622#{I18n.t('variants.beech_wenge')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0622, solid_beech, beech_nut, satin, trims],
+    :sku => "0622#{I18n.t('variants.beech_nut')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0622, solid_beech, beech_pure_silver, satin, trims],
+    :sku => "0622#{I18n.t('variants.beech_pure_silver')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0622, solid_beech, beech_pistachio_vanilla, satin, trims],
+    :sku => "0622#{I18n.t('variants.beech_pistachio_vanilla')}",
+    :cost_price => 27945
+  },
+  
+  {
+    :product => perfecto,
+    :option_values => [m0620, solid_beech, beech_wenge, satin, trims],
+    :sku => "0620#{I18n.t('variants.beech_wenge')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0620, solid_beech, beech_nut, satin, trims],
+    :sku => "0620#{I18n.t('variants.beech_nut')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0620, solid_beech, beech_pure_silver, satin, trims],
+    :sku => "0620#{I18n.t('variants.beech_pure_silver')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0620, solid_beech, beech_pistachio_vanilla, satin, trims],
+    :sku => "0620#{I18n.t('variants.beech_pistachio_vanilla')}",
+    :cost_price => 27945
+  },
+  
+  {
+    :product => perfecto,
+    :option_values => [m0621, solid_beech, beech_wenge, trims],
+    :sku => "0621#{I18n.t('variants.beech_wenge')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0621, solid_beech, beech_nut, trims],
+    :sku => "0621#{I18n.t('variants.beech_nut')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0621, solid_beech, beech_pure_silver, trims],
+    :sku => "0621#{I18n.t('variants.beech_pure_silver')}",
+    :cost_price => 27945
+  },
+  {
+    :product => perfecto,
+    :option_values => [m0621, solid_beech, beech_pistachio_vanilla, trims],
+    :sku => "0621#{I18n.t('variants.beech_pistachio_vanilla')}",
+    :cost_price => 27945
+  },
+  
   
   {
     :product => legend,

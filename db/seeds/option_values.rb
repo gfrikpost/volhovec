@@ -420,6 +420,36 @@ Spree::OptionValue.create!([
     :position => 65,
     :option_type => model
   },
+  {
+    :name => "0610",
+    :presentation => "0610",
+    :position => 66,
+    :option_type => model
+  },
+  {
+    :name => "0611",
+    :presentation => "0611",
+    :position => 67,
+    :option_type => model
+  },
+  {
+    :name => "0622",
+    :presentation => "0622",
+    :position => 68,
+    :option_type => model
+  },
+  {
+    :name => "0620",
+    :presentation => "0620",
+    :position => 69,
+    :option_type => model
+  },
+  {
+    :name => "0621",
+    :presentation => "0621",
+    :position => 70,
+    :option_type => model
+  },
   
   # END Models
   
@@ -674,6 +704,18 @@ Spree::OptionValue.create!([
     :name => "Beech pistachio",
     :presentation => I18n.t('option_values.beech_pistachio'),
     :position =>31,
+    :option_type => color,
+  },
+  {
+    :name => "Beech pure silver",
+    :presentation => I18n.t('option_values.beech_pure_silver'),
+    :position =>32,
+    :option_type => color,
+  },
+   {
+    :name => "Beech pistachio vanilla",
+    :presentation => I18n.t('option_values.beech_pistachio_vanilla'),
+    :position =>33,
     :option_type => color,
   },
 # END Colors

@@ -26,6 +26,10 @@ interio = Spree::Product.find_by_name!("Interio")
 interio.option_types = [model, material, color, making_portal]
 interio.save!
 
+perfecto = Spree::Product.find_by_name!("Perfecto")
+perfecto.option_types = [model, material, color, glass, making_portal]
+perfecto.save!
+
 legend = Spree::Product.find_by_name!("Legend")
 legend.option_types = [model, material, color]
 legend.save!

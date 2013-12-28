@@ -6,6 +6,7 @@ products[:prio] = Spree::Product.find_by_name!("Prio")
 products[:new_classic] = Spree::Product.find_by_name!("New Classic")
 products[:decanto] = Spree::Product.find_by_name!("Decanto")
 products[:interio] = Spree::Product.find_by_name!("Interio")
+products[:perfecto] = Spree::Product.find_by_name!("Perfecto")
 products[:legend] = Spree::Product.find_by_name!("Legend")
 products[:avant] = Spree::Product.find_by_name!("Avant")
 products[:modum] = Spree::Product.find_by_name!("Modum")
@@ -122,6 +123,27 @@ products[:interio].variants.each do |variant|
   p "#{model}_#{color}"
 
   main_image = image("#{model}_#{color}", "png")
+  variant.images.create!(:attachment => main_image)
+end
+
+products[:perfecto].variants.each do |variant|
+  model = variant.option_value("model")
+
+  color = variant.option_value("color")
+  color = "bbls" if color == I18n.t('option_values.beech_pure_silver')
+  color = "bfv" if color == I18n.t('option_values.beech_pistachio_vanilla')
+  color = "bor" if color == I18n.t('option_values.beech_nut')
+  color = "bv" if color == I18n.t('option_values.beech_wenge')
+
+  glass = variant.option_value("glass")
+  glass = "_sat" if glass == I18n.t('option_values.satin')
+  
+  making_portal = variant.option_value("making portal")
+  making_portal = "tr" if making_portal == I18n.t('option_values.trims')
+
+  p "#{model}" + "_#{color}" + "#{glass if glass}" + "_#{making_portal}"
+
+  main_image = image("#{model}" + "_#{color}" + "#{glass if glass}" + "_#{making_portal}", "png")
   variant.images.create!(:attachment => main_image)
 end
 
