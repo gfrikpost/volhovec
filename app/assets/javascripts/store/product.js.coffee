@@ -41,10 +41,15 @@ $ ->
       ($ '#main-image').data 'selectedThumbId', thumb.attr('id')
       Spree.updateVariantPrice ($ '#option_values_variant_' + variantId)
       ($ '#submited_variant').val(variantId)
-      if ($ event.currentTarget).find('a').attr('href') != '/' 
-        ($ '#main-image img').attr 'src', ($ event.currentTarget).find('a').attr('href')
-      else
-        thumb.addClass 'selected'
+      b = ($ event)
+      if b[0] != undefined
+        if ($ event.currentTarget).find('a').attr('href') != '/' 
+          if ($ event.currentTarget).find('a').attr('href') == undefined
+            ($ '#main-image img').attr 'src', ($ event.srcElement).find('a').attr('href')
+          else  
+            ($ '#main-image img').attr 'src', ($ event.currentTarget).find('a').attr('href')
+        else
+          thumb.addClass 'selected'
 
   Spree.updateVariantPrice = (variant) ->
     variantPrice = variant.data('price')
