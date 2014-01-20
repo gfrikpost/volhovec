@@ -18,3 +18,5 @@
 /config/database.yml
 /Gemfile.lock
 /public/spree
+/public/assets
+.DS_Store
