@@ -5,14 +5,18 @@ $default_border:    1px solid $border_color !default;
 body {
     background: asset-url("store/background-mirror.jpg", image) fixed;
     background-size: cover;
+    min-width: 980px;
+    max-width: 1280px;
 }
 
 .container {
-    width: 1335px;
+
+    width: 1280px;
 }
 
 .container .twelve.columns {
-    width: 1000px;
+    /*width: 1000px;*/
+    width: 945px;
 }
 
 .container .three.columns {
@@ -62,17 +66,22 @@ figure#logo img {
 #phone {
     margin-top: 15px;
     position: absolute;
+    background: url(/assets/store/phone.png) 224px 78px;
+    background-size: 278px 78px;
     margin-left: 1048px;
+    width: 225px;
+    height: 78px;
 
-    img {
+    /*img {
         height: 78px;
         width: 278px;
-    }
+    }*/
 }
 
 #cards {
     margin-top: 100px;
-    margin-left: 1122px;
+    /*margin-left: 1122px;*/
+    margin-left: 1083px;
     position: absolute;
 
     img {
