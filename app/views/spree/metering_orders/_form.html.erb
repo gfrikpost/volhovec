@@ -1,0 +1,14 @@
+<fieldset id="billing" style="background:whitesmoke;">
+  <p class="field">
+    <%= f.label :name, Spree.t(:first_name) %><br />
+    <%= f.text_field :name, :class => '' %>
+  </p>
+  <p class="field">
+    <%= f.label :phone, Spree.t(:phone) %><span class="required">*</span><br />
+    <%= f.text_field :phone, :class => '' %>
+  </p>
+  <p class="field">
+    <%= f.label :information, Spree.t(:street_address) %><br />
+    <%= f.text_area :information, :rows => 4, :class => '' %>
+  </p>
+</fieldset>
