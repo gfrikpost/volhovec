@@ -1,0 +1,51 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:listing_orders) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to Spree.t(:new_order), new_admin_metering_order_url, :icon => 'icon-plus', :id => 'admin_new_order_for_metering' %>
+  </li>
+<% end if can? :edit, Spree::Order.new %>
+
+<%= render :partial => 'spree/admin/shared/order_sub_menu' %>
+
+<%= paginate @metering_orders %>
+
+<% if @metering_orders.any? %>
+  <table class="index responsive" id="listing_orders" data-hook>
+    <colgroup>
+       <col style="width: 20%;">
+       <col style="width: 20%;">
+       <col style="width: 20%;">
+       <col style="width: 20%;">
+       <col style="width: 20%;">
+    </colgroup>
+    <thead>
+      <tr data-hook="admin_orders_index_headers">
+        <th><%= I18n.t(:created_at, :scope => 'activerecord.attributes.spree/order')%></th>
+        <th><%=  I18n.t(:completed_at, :scope => 'activerecord.attributes.spree/order') %></th>
+        <th><%= I18n.t(:state, :scope => 'activerecord.attributes.spree/order') %></th>
+        <th><%= I18n.t(:firstname, :scope => 'activerecord.attributes.spree/address') %></th>
+        <th><%= I18n.t(:phone, :scope => 'activerecord.attributes.spree/address') %></th>
+        <th data-hook="admin_orders_index_header_actions" class="actions"></th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @metering_orders.each do |order| %>
+      <tr data-hook="admin_orders_index_rows" class="state-<%= order.state.downcase %> <%= cycle('odd', 'even') %>">
+        <td class="align-center"><%= l (order.created_at).to_date %></td>
+        <td class="align-center"><%= l (order.completed_at).to_date if order.completed_at %></td>
+        <td class="align-center"><span class="state <%= order.state.downcase %>"><%= Spree.t("payment_states.#{order.state}") %></span></td>
+        <td class="align-center"><%= order.name %></td>
+        <td class="align-center"><%= order.phone %></td>
+        <td class='actions align-center' data-hook="admin_orders_index_row_actions">
+          <%= link_to_edit_url edit_admin_metering_order_path(order), :title => "admin_edit_#{dom_id(order)}", :no_text => true %>
+        </td>
+      <tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<%= paginate @metering_orders %>
