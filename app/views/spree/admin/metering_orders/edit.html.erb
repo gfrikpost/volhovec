@@ -1,0 +1,23 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:edit)%> <%= Spree.t(:order) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to Spree.t(:back_to_orders_list), spree.admin_metering_orders_path, :icon => 'icon-arrow-left' %>
+  </li>
+<% end if can? :edit, Spree::Order.new %>
+
+<%= render :partial => 'spree/admin/shared/order_sub_menu' %>
+
+<%= form_for @metering_order, url: spree.admin_metering_order_path, method: :PUT do |f| %>
+  <fieldset class="no-border-top">
+    <%= render :partial => 'form', :locals => { :f => f } %>
+  </fieldset>
+
+  <div class="form-buttons filter-actions actions" data-hook="buttons">
+    <%= button Spree.t('actions.update'), 'icon-ok' %>
+    <span class="or"><%= Spree.t(:or) %></span>
+    <%= link_to_with_icon 'icon-remove', Spree.t('actions.cancel'), spree.admin_metering_orders_path, :class => 'button' %>
+  </div>
+<% end %>

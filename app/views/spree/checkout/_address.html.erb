@@ -1,5 +1,5 @@
 <div class="columns alpha six" data-hook="billing_fieldset_wrapper">
-  <fieldset id="billing" data-hook>
+  <fieldset id="billing" style="background:whitesmoke" data-hook>
     <%= form.fields_for :bill_address do |bill_form| %>
       <legend align="center"><%= Spree.t(:shipping_address) %></legend>
       <%= render :partial => 'spree/address/form', :locals => { :form => bill_form, :address_type => 'billing', :address => @order.bill_address } %>

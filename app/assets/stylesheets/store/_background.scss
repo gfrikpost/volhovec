@@ -78,15 +78,35 @@ figure#logo img {
     }*/
 }
 
-#cards {
+/*#cards {
     margin-top: 100px;
     /*margin-left: 1122px;*/
-    margin-left: 1083px;
+    /*margin-left: 1083px;
     position: absolute;
 
     img {
         height: 50px;
         width: 190px;
+    }
+}*/
+
+#metering_order_link {
+    margin-top: 100px;
+    margin-left: 1066px;
+    position: absolute;
+    background-color: rgb(245, 245, 245);
+    height: 55px;
+    width: 205px;
+    border: 1px solid red;
+
+    img {
+        height: 50px;
+        width: 50px;
+        float: left;
+    }
+    span {
+        color: red;
+        font-size: 13px;
     }
 }
 
