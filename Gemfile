@@ -53,3 +53,4 @@ gem 'spree_static_content', :github => 'spree/spree_static_content', branch: '2-
 gem 'spree_editor', :github => 'spree/spree_editor'
 gem 'tinymce-rails-langs'
 gem 'money', :github => "radar/money", :branch => "issue-272"
+gem 'russian', '~> 0.6.0'

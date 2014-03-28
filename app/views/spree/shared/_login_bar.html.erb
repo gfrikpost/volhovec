@@ -1,0 +1,16 @@
+<% if spree_current_user %>
+  <li><%= link_to Spree.t(:my_account), spree.account_path, class: 'punctir' %></li>
+  <li>|</li>
+  <li><%= link_to Spree.t(:logout), spree.logout_path, class: 'punctir' %></li>
+<% else %>
+  <li id="link-to-login" style="">
+    <a href="<%= spree.login_path %>">
+      <span class="punctir" style="">Войти</span>
+    </a>
+  </li>
+  <li id="link-to-registration">
+    <a href="<%= spree.registration_path %>">
+      <span class="punctir">Регистрация</span>
+    </a>
+  </li>
+<% end %>

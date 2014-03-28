@@ -1,0 +1,75 @@
+<% css_class = 'not' %>
+<nav class="columns sixteen">
+  <ul id="main-nav-bar" class="inline" data-hook>
+    <li class=<%=(request.fullpath.gsub('//','/') == '/about') ? 'current' : 'not'%>>
+      <a href="/about">О нас</a>
+    </li>
+    <% css_class = 'current' if request.fullpath.gsub('//','/') == '/' %>
+    <% css_class = 'current' if request.fullpath.gsub('//','/') =~ /catalog/ %>
+    <% css_class = 'current' if request.fullpath.gsub('//','/') =~ /products/ %>
+    <li class="<%= css_class %>">
+      <a href="/catalog/modern">Каталог</a>
+      <% if css_class == 'current' %>
+        <div class="arr-g"></div>
+        <div class="submenu pl-2">
+          <ul>
+            <li>
+              <a href="/catalog/classic" style=<%= (request.fullpath.gsub('//','/') == '/catalog/classic') ? 'color: #fff!important;' : '' %>>
+                Классика
+                <div class=<%= (request.fullpath.gsub('//','/') == '/catalog/classic') ? 'arr-w' : '' %>></div>
+              </a>
+            </li>
+            <li>
+              <a href="/catalog/modern" style=<%= (request.fullpath.gsub('//','/') == '/catalog/modern') ? 'color: #fff!important;' : '' %>>Модерн
+                <div class=<%= (request.fullpath.gsub('//','/') == '/catalog/modern') || (request.fullpath.gsub('//','/') == '/') ? 'arr-w' : '' %>></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      <% end %>
+    </li>
+    <% css_class = 'not' %>
+    <% css_class = 'current' if request.fullpath.gsub('//','/') == '/service' %>
+    <% css_class = 'current' if request.fullpath.gsub('//','/') == '/options' %>
+    <% css_class = 'current' if request.fullpath.gsub('//','/') == '/payments_options' %>
+    <li class="<%= css_class %>">
+      <a href="/service">Сервис</a>
+      <% if css_class == 'current' %>
+        <div class="arr-g"></div>
+        <div class="submenu pl-3">
+          <ul>
+            <li>
+              <a href="/service" style=<%= (request.fullpath.gsub('//','/') == '/service') ? 'color: #fff!important;' : '' %>>
+                Информация
+                <div class=<%= (request.fullpath.gsub('//','/') == '/service') ? 'arr-w' : '' %>></div>
+              </a>
+            </li>
+            <li>
+              <a href="/options" style=<%= (request.fullpath.gsub('//','/') == '/options') ? 'color: #fff!important;' : '' %>>
+                Дополнительные опции
+                <div class=<%= (request.fullpath.gsub('//','/') == '/options') ? 'arr-w' : '' %>></div>
+              </a>
+            </li>
+            <li>
+              <a href="/payments_options" style=<%= (request.fullpath.gsub('//','/') == '/payments_options') ? 'color: #fff!important;' : '' %>>
+                Способы оплаты
+                <div class=<%= (request.fullpath.gsub('//','/') == '/payments_options') ? 'arr-w' : '' %>></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      <% end %>
+    </li>
+    <li class=<%=(request.fullpath.gsub('//','/') == '/actions') ? 'current' : 'not'%>>
+      <a href="/actions">Акции</a>
+    </li>
+    <li class=<%=(request.fullpath.gsub('//','/') == '/contacts') ? 'current' : 'not'%>>
+      <a href="/contacts">Контакты</a>
+    </li>
+    <!--<li id="home-link" data-hook><%# link_to Spree.t(:home), spree.root_path %></li>-->
+    <li id="link-to-cart" data-hook><%= link_to_cart_my %></li>
+    <% if request.fullpath.gsub('//','/') =~ /checkout/ %>
+      <div class="submenu" data-hook="checkout_progress"><%= checkout_progress_my %></div>
+    <% end %>
+  </ul>
+</nav>
