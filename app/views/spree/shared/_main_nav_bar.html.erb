@@ -69,7 +69,9 @@
     <!--<li id="home-link" data-hook><%# link_to Spree.t(:home), spree.root_path %></li>-->
     <li id="link-to-cart" data-hook><%= link_to_cart_my %></li>
     <% if request.fullpath.gsub('//','/') =~ /checkout/ %>
-      <div class="submenu" data-hook="checkout_progress"><%= checkout_progress_my %></div>
+      <% unless request.fullpath.gsub('//','/') != '/checkout/registration/' %>
+        <div class="submenu" data-hook="checkout_progress"><% checkout_progress_my %></div>
+      <% end %>
     <% end %>
   </ul>
 </nav>
