@@ -1,25 +1,19 @@
 <header id="header" class="row" data-hook>
-  <!-- <figure id="logo" class="columns six" data-hook> logo </figure> -->
-  <figure id="logo" class="columns" data-hook><%= logo %></figure>
-  <div id="shop-name"><%= Spree.t(:shop_name) %></div>
-  <div id="phone">
-    <%# image_tag 'store/phone.png' %>
-  </div>
-  <div id="garanty">
-    <%= image_tag 'store/garanty.png' %>
-  </div>
-  <!--<div id="cards">
-    <%# image_tag 'store/cards.png' %>
-  </div> -->
-  <div id="metering_order_link">
-    <a href="<%= new_metering_order_path %>">
-      <%= image_tag 'store/metering_order_icon.png' %>
-      <span>Оформи заказ на замер</span><br><span>и получи в пордарок</span><br><span>бесплатную доставку!</span>
-    </a>
-  </div>
-  <script type="text/javascript">
-    setInterval(function(){$('#metering_order_link').fadeOut(2000).fadeIn(2000)},1000);
-  </script>
-  <!--  render :partial => 'spree/shared/nav_bar' -->
-  <!-- render :partial => 'spree/shared/main_nav_bar' if store_menu? %> -->
+  <figure id="logo" style="display:inline;width:200px" data-hook><%= logo %></figure>
+  <!--<figure id="logo" class="columns" data-hook><%# logo %></figure> -->
+  <!--<div id="shop-name"><%# Spree.t(:shop_name) %></div> -->
+  <!--
+    <div id="phone">
+      <%# image_tag 'store/phone.png' %>
+    </div>
+    <div id="garanty">
+      <%# image_tag 'store/garanty.png' %>
+    </div>
+    <div id="cards">
+      <%# image_tag 'store/cards.png' %>
+    </div>
+  -->
+  <div id="garanty"></div>
+  <%= render :partial => 'spree/shared/nav_bar' %>
+  <%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
 </header>
