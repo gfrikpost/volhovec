@@ -1,36 +1,11 @@
 <%= form_for :order, :url => populate_orders_path do |f| %>
   <div id="inside-product-cart-form" data-hook="inside_product_cart_form" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-
-    <% if @product.variants_and_option_values(current_currency).any? %>
-      <div id="product-variants" class="columns five alpha">
-        <h6 class="product-section-title"><%= Spree.t(:variants) %></h6>
-          <% @product.variants_and_option_values(current_currency).each_with_index do |variant, index| %>
-            <table id="option_values_variant_<%= variant.id %>" class="product-variants-table table-display" data-price="<%= display_price(variant) %>" data-variant_id="<%= variant.id %>" data-hook>
-              <tbody>
-                <% variant.option_values.each do |o_val| %>
-                  <% css_class = cycle('even', 'odd', :name => "properties") %>
-                  <tr class="<%= css_class %>">
-                    <td><strong><%= o_val.option_type.presentation %></strong></td>
-                    <% if o_val.option_type.name == "model" %>
-                      <td><%= variant.sku %></td>
-                    <% else %>
-                      <td><%= o_val.presentation %></td>
-                    <% end %>
-                  </tr>
-                <% end %>
-                <% reset_cycle('properties') %>
-              </tbody>
-            </table>
-          <% end %>        
-      </div>
-    <% end%>
-
     <% if @product.price_in(current_currency) and !@product.price.nil? %>
       <div data-hook="product_price" class="columns five <% if !@product.has_variants? %> alpha <% else %> omega <% end %>">
 
         <div id="product-price">
-          <h6 class="product-section-title"><%= Spree.t(:price) %></h6>
           <div>
+            <span class="product-section-title"><%= Spree.t(:price) %></span>
             <span class="price selling" itemprop="price">
               <%= display_price(@product) %>
             </span>
@@ -46,7 +21,7 @@
           <%= number_field_tag (@product.variants_and_option_values.any? ? :quantity : "variants[#{@product.master.id}]"),
             1, :class => 'title', :min => 1 %>
           <%= hidden_field_tag "products[#{@product.id}]", @product.variants.first.id, { id: "submited_variant" } %>
-          <%= button_tag :class => 'large primary', :id => 'add-to-cart-button', :type => :submit do %>
+          <%= button_tag :class => 'large primary', :id => 'add-to-cart-button', :type => :submit, :style => 'background-color: #8d2c5d;' do %>
             <%= Spree.t(:add_to_cart) %>
           <% end %>
         </div>
