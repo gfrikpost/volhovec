@@ -80,8 +80,10 @@ Spree::ProductsController.class_eval do
 
       opt_values.each { |o_val|
         unless [1, 2, 3].include?(o_val.option_type_id)
-          models_hash[model]['color'][color][option_types_hash[o_val.option_type_id]['name']] ||= []
-          models_hash[model]['color'][color][option_types_hash[o_val.option_type_id]['name']] << "<img src=\"/spree/#{option_types_hash[o_val.option_type_id]['name']}/#{o_val.name.downcase.gsub(' ', '_')}.jpg\" width=\"50px\" height=\"50px\" data-#{option_types_hash[o_val.option_type_id]['name']}=\"#{o_val.name.downcase.gsub(' ', '_')}\" data-presentation=\"#{o_val.presentation}\">"
+          if option_types_hash[o_val.option_type_id]
+            models_hash[model]['color'][color][option_types_hash[o_val.option_type_id]['name']] ||= []
+            models_hash[model]['color'][color][option_types_hash[o_val.option_type_id]['name']] << "<img src=\"/spree/#{option_types_hash[o_val.option_type_id]['name']}/#{o_val.name.downcase.gsub(' ', '_')}.jpg\" width=\"50px\" height=\"50px\" data-#{option_types_hash[o_val.option_type_id]['name']}=\"#{o_val.name.downcase.gsub(' ', '_')}\" data-presentation=\"#{o_val.presentation}\">"
+          end
         end
       }
     end
@@ -96,9 +98,11 @@ Spree::ProductsController.class_eval do
       variants_hash[variant.id]['option_values'] ||= {}
 
       variant.option_values.each do |o_val|
-        variants_hash[variant.id]['option_values'][option_types_hash[o_val.option_type_id]['name']] = o_val.name.downcase.gsub(' ', '_')
-        if option_types_hash[o_val.option_type_id]['name'] == 'material'
-          variants_hash[variant.id]['option_values']['material_preset'] = o_val.presentation
+        if option_types_hash[o_val.option_type_id]
+          variants_hash[variant.id]['option_values'][option_types_hash[o_val.option_type_id]['name']] = o_val.name.downcase.gsub(' ', '_')
+          if option_types_hash[o_val.option_type_id]['name'] == 'material'
+            variants_hash[variant.id]['option_values']['material_preset'] = o_val.presentation
+          end
         end
       end
     end
