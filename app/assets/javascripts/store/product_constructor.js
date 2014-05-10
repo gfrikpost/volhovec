@@ -79,6 +79,7 @@ findVariant = function(){
 };
 
 jQuery(document).ready(function(){
+  if (typeof Product == 'undefined') { return }
   for (first_model_color in Product.models.thumbs) break
   var modelsItems = Product.models.thumbs[first_model_color];
   setCarousel('model-carousel', modelsItems);
@@ -136,7 +137,30 @@ jQuery(document).ready(function(){
     var model = $('#model-carousel .current img').attr('data-model');
     var color = $(this).find('img').attr('data-color');
     var modelsArr = Product.models.thumbs[color]
-    carouselChangeItems('model-carousel', modelsArr, '[data-model=' + model + ']');
+
+    var tmpArr = [];
+    var tmpArr2 = [];
+
+    $.each(modelsArr, function(index,value){
+      var div = document.createElement("div");
+      div.innerHTML = value;
+      var chld = $(div).children();
+      tmpArr2.push(chld.attr('data-model'));
+    });
+
+    $('#model-carousel img').each(function(){  tmpArr.push($(this).attr('data-model')) });
+    if (tmpArr.toString() != tmpArr2.toString()){
+      carouselChangeItems('model-carousel', modelsArr, '[data-model=' + model + ']');
+    }else{
+      $.each(modelsArr, function(index,value){
+        var div = document.createElement("div");
+        div.innerHTML = value;
+        var chld = $(div).children();
+        $('[data-model = ' + chld.attr('data-model') + ']').attr('src', chld.attr('src'));
+      });
+    }
+
+    //carouselChangeItems('model-carousel', modelsArr, '[data-model=' + model + ']');
 
     var glass = $('#glass-carousel .current img').attr('data-glass');
     var glassArr = Product.models[model]['color'][color]['glass'];
