@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131201024810) do
+ActiveRecord::Schema.define(version: 20140207060600) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "metering_orders", force: true do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.text     "information"
+    t.string   "state"
+    t.datetime "completed_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_activator_translations", force: true do |t|
     t.integer  "spree_activator_id"
