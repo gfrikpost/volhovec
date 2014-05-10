@@ -1,4 +1,4 @@
-if (typeof Product != 'undefined') {
+if (typeof Product == 'undefined') { Product = {} }else{
 
   setVariant = function(variant_id){
     var variant = Product.variants[variant_id];
