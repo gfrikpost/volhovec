@@ -34,7 +34,6 @@ module Volhovec
      config.i18n.default_locale = :ru
      config.assets.paths << Rails.root.join("vendor", "assets", "stylesheets")
      config.assets.paths << Rails.root.join("vendor", "assets", "javascripts")
-     config.assets.paths << Rails.root.join("app", "assets", "javascripts", "store")
 
      config.assets.precompile += %w( product_constructor.js jquery.jcarousel.min.js jquery.jcarousel.css )
   end
