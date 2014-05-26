@@ -1,5 +1,10 @@
 <header id="header" class="row" data-hook>
   <figure id="logo" style="display:inline;width:200px" data-hook><%= logo %></figure>
+  <%= link_to new_metering_order_path do %>
+    <div id="metering-order-img">
+      <%= image_tag 'store/metering_order.png' %>
+    </div>
+  <% end %>
   <!--<figure id="logo" class="columns" data-hook><%# logo %></figure> -->
   <!--<div id="shop-name"><%# Spree.t(:shop_name) %></div> -->
   <!--
