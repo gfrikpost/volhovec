@@ -2,19 +2,21 @@
   <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @metering_order } %>
 
   <div class="row" data-hook="checkout_header">
-    <h1 class="columns three alpha" data-hook="checkout_title"><%= Spree.t(:checkout) %></h1>
+    <div class="h1">
+      <%= Spree.t(:checkout) %>
+    </div>
   </div>
 
   <div class="row" data-hook="checkout_content">
-    <div class="columns alpha six" data-hook="checkout_form_wrapper">
+    <div class="columns alpha eight" data-hook="checkout_form_wrapper">
       <%= form_for @metering_order, url: spree.metering_orders_path do |f| %>
         <%= render :partial => 'form', :locals => { :f => f } %>
 
         <div class="form-buttons filter-actions actions" data-hook="buttons">
           <p class="field">
-            <%= button Spree.t('actions.create'), 'icon-ok' %>
+            <%= button Spree.t('actions.create'), 'icon-ok phazan gray'  %>
             <span class="or"><%= Spree.t(:or) %></span>
-            <%= link_to_with_icon 'icon-remove', Spree.t('actions.cancel'), root_path, :class => 'button' %>
+            <%= link_to_with_icon 'icon-remove', Spree.t('actions.cancel'), root_path, :class => 'button gray' %>
           <p>
         </div>
       <% end %>
