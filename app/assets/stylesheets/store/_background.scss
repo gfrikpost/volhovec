@@ -151,10 +151,32 @@ nav #main-nav-bar li.current a{
     color: #e06a60;
 }
 
+#logo{
+    float: left;
+}
 
 #logo img {
     height: 67px;
     width: 200px;
+}
+
+#metering-order-img{
+    margin-left: 50px;
+    float: left;
+    text-align: center;
+}
+
+.phazan{
+    background-color:#8d2c5d !important;
+}
+
+#metering-order-img:hover{
+    box-shadow: 0 0 3px #555;
+    border-radius: 3px;
+}
+
+#metering-order-img img{
+    width: 340px;
 }
 
 #garanty{
